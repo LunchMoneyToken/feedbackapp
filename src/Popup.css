@@ -1,0 +1,99 @@
+#Popup {
+    position: fixed;
+    top: 25%;
+    left: 25%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    
+    filter: blur(4px);
+    -o-filter: blur(4px);
+    -ms-filter: blur(4px);
+    -moz-filter: blur(4px);
+    -webkit-filter: blur(4px);  
+}
+
+.nv {
+    background: transparent !important;
+}
+
+.smText {
+    font-family: 'LatoMedium';
+}
+
+small {
+    color: rgb(223, 223, 223);
+    display: block;
+    font-size: 0.6rem;
+    padding-bottom: 6px;
+}
+
+.nl_active {
+    border-bottom: 2px solid rgb(0, 60, 164);
+}
+
+#feedbackForm {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0px 40px 0px 40px;
+    text-align: left;
+}
+
+.form-control::placeholder {
+    color: rgb(216, 216, 216);
+    font-family: 'LatoMedium';
+}
+
+.nvs {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.nl {
+    padding-top: 0 !important;
+}
+
+.btn-sm {
+    color: white !important;
+}
+
+
+label {
+    font-family: 'LatoMedium';
+}
+
+.fa {
+    font-size: 1.4rem;
+}
+
+.nav-link {
+    cursor: pointer;
+    color: white !important;
+}
+
+#backdropCon {
+    z-index: 2;
+    border-radius: 20px;
+    /* padding: 5px; */
+    color: white !important;
+    background: rgba(118, 137, 171, 0.8);
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    #backdropCon {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+    }
+}

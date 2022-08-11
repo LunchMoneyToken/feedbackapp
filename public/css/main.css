@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'LatoBlack';
+    src: url('/assets/fonts/Lato-Black.woff');
+}
+
+@font-face {
+    font-family: 'LatoLight';
+    src: url('/assets/fonts/Lato-Light.woff');
+}
+
+@font-face {
+    font-family: 'LatoMedium';
+    src: url('/assets/fonts/Lato-Medium.woff');
+}
+
+body {
+    font-family: 'LatoBlack';
+}
