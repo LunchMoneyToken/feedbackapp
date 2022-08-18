@@ -1,9 +1,11 @@
 import Stars from './Stars'
+import $ from 'jquery'
 
 export default function Feedback(props) {
 
     const handleClick = () => {
-        props.clickEvent(0)
+        props.clickEvent(0);
+        $('#add_restro').addClass('dotMarked');
     }
 
     return (

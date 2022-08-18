@@ -1,4 +1,5 @@
 #Popup {
+    z-index: 11;
     position: fixed;
     top: 25%;
     left: 25%;
@@ -7,6 +8,7 @@
 }
 
 #overlay {
+    z-index: 10;
     position: fixed;
     left: 0;
     top: 0;
@@ -56,12 +58,17 @@ small {
     font-family: 'LatoMedium';
 }
 
+.nav-item{
+    list-style: none !important;
+}
+
 .nvs {
     padding-left: 15px;
     padding-right: 15px;
 }
 
 .nl {
+    margin: 10px;
     padding-top: 0 !important;
 }
 

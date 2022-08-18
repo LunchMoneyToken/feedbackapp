@@ -52,6 +52,10 @@ async function switch_network(chainId) {
     });
 }
 
+function addMarked(idName){
+    $('#'+idName).addClass('dotMarked');
+}
+
 function check() {
     web3.eth.getAccounts().then(async (tx) => {
         if (tx[0] !== undefined) {
@@ -60,6 +64,8 @@ function check() {
             alert("Wallet connected !!!")
 
             await fetchStamp(walletAddress)
+
+            addMarked('wallet_connected')
 
             web3.eth.net.getId().then(async (netId) => {
                 if (netId === chainId) {

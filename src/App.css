@@ -60,7 +60,7 @@ img {
 .greyCon {
     border-radius: 20px;
     /* padding: 100px auto 100px auto !important; */
-    margin: 100px auto 100px auto;
+    margin: 10px auto 100px auto;
     background: rgb(248 248 248);
 }
 
@@ -166,14 +166,11 @@ img {
 }
 
 .set>img {
-    width: 70%;
+    width: 60%;
+    height: 170px;
 }
 
 /* Chain */
-
-.cImg {
-    height: 220px;
-}
 
 .pr {
     margin-left: auto;
@@ -190,31 +187,39 @@ img {
     display: inline-block;
 }
 
+#WEB3_CONNECT_MODAL_ID > div{
+    z-index: 12;
+}
+
 .dotMarked {
     background-color: rgb(102, 255, 0);
 }
-
-/* .dotMarked:before {
-    content: '✓';
-    position: absolute;
-    top: 0;
-    color: white;
-    font-size: 1.4rem;
-} */
 
 .line-btw {
     height: 3px;
     width: 20.5%;
     background-color: orange;
 }
-
-/* .line-btw-marked{
-    background-color: rgb(0, 202, 0);
-} */
-
 /* Chain */
 
 @media (max-width: 780px) {
+    .nl{
+        margin: 25px !important;
+    }
+    .rmp{
+        margin-top: 10%;
+        padding-left: calc(var(--bs-gutter-x) * .5) !important;
+    }
+    #Popup{
+        position: absolute !important;
+        left: 0% !important;
+        top: 10% !important;
+    }
+    .set>img {
+        width: 70%;
+        height: 170px;
+    }
+
     .cn {
         padding-right: 10px !important;
         padding-left: 0px !important;

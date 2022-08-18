@@ -17,7 +17,7 @@ export default function FeedbackForm() {
                         <label className="form-input">Time:</label>
                         <input id="attendTime" required name="attendTime" type="time"  className="form-control" placeholder="01-01-2022" />
                     </div>
-                    <div className="col-md-8" style={{ paddingLeft: 40 + 'px' }}>
+                    <div className="col-md-8 rmp" style={{ paddingLeft: 40 + 'px' }}>
                         <label>Feedback:</label>
                         <small className="smText">How was your customer experience? ( 50 characters maximum )</small>
                         <textarea id="feedbackText" required name="feedbackText" placeholder="I love it :)" maxLength="50" className="form-control" rows="2"></textarea>
