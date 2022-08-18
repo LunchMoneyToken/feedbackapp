@@ -3,7 +3,7 @@ export default function TopHead() {
         <div className="row">
             <div className="col-md-9">
                 <h1 className="topHead">
-                    <span id="underlinedText">Claim your Rewards</span> from<br />your favourite restaurants
+                    <span id="underlinedText">Claim your Rewards from<br />your favourite restaurants</span>
                 </h1>
             </div>
             <div className="col-md-3 hide_it">

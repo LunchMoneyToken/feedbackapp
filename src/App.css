@@ -14,7 +14,7 @@ img {
 
 }
 
-.cn{
+.cn {
     padding-left: 80px;
     padding-right: 80px;
 }
@@ -24,7 +24,7 @@ img {
 }
 
 .navbar-brand>img {
-    width: 60%;
+    width: 150px;
 }
 
 .dropdown-menu {
@@ -33,12 +33,12 @@ img {
     background: rgba(118, 137, 171, 0.8);
 }
 
-.dropdown-item:hover{
+.dropdown-item:hover {
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.504) !important;
 }
 
-.dropdown-item{
+.dropdown-item {
     color: white !important;
 }
 
@@ -70,7 +70,7 @@ img {
 }
 
 #underlinedText {
-    text-decoration-thickness: 10px;
+    text-decoration-thickness: 7px;
     text-decoration-color: rgb(255, 157, 0);
     text-decoration-line: underline;
     text-underline-position: under;
@@ -95,7 +95,7 @@ img {
 }
 
 .btn-sm-same {
-    margin-right: 10px;
+    margin: 5px;
     outline: none !important;
     border: none !important;
     border-color: #fff;
@@ -153,7 +153,7 @@ img {
 }
 
 .setTitle {
-    width: 50%;
+    /* width: 50%; */
     margin-right: auto;
     margin-left: auto;
     text-align: center;
@@ -169,22 +169,77 @@ img {
     width: 70%;
 }
 
+/* Chain */
+
+.cImg {
+    height: 220px;
+}
+
+.pr {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-left: 9%;
+}
+
+.dot2 {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dotMarked {
+    background-color: rgb(102, 255, 0);
+}
+
+/* .dotMarked:before {
+    content: '✓';
+    position: absolute;
+    top: 0;
+    color: white;
+    font-size: 1.4rem;
+} */
+
+.line-btw {
+    height: 3px;
+    width: 20.5%;
+    background-color: orange;
+}
+
+/* .line-btw-marked{
+    background-color: rgb(0, 202, 0);
+} */
+
+/* Chain */
+
 @media (max-width: 780px) {
-    .topHead{
-        font-size: 3rem !important;
+    .cn {
+        padding-right: 10px !important;
+        padding-left: 0px !important;
     }
-    .claimCon{
+
+    .topHead {
+        font-size: 2.5rem !important
+    }
+
+    .claimCon {
         padding: 10px !important;
     }
-    .stylesCOn{
+
+    .stylesCOn {
         padding: 20px !important;
     }
-    #lmycode{
+
+    #lmycode {
         width: 100% !important;
     }
-    .btn{
+
+    .btn {
         width: 100% !important;
     }
+
     .hide_it {
         display: none !important;
     }
