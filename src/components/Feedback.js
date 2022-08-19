@@ -4,6 +4,7 @@ import $ from 'jquery'
 export default function Feedback(props) {
 
     const handleClick = () => {
+        $(window).scrollTop(0);
         props.clickEvent(0);
     }
 

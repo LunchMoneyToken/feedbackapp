@@ -89,12 +89,10 @@ function check() {
                             feedBackData['starsCount'] = $('#starsCount').text()
                             alert("Give us a moment we are working on your feedback !!!")
                             $('#feedbackForm')[0].reset()
-                            
+
                             await push_it(walletAddress, feedBackData)
                             await updateReward(walletAddress)
                             sendMail(feedBackData)
-
-
 
                             // Closing up
                             alert("Thanks for your feedback !!!")
