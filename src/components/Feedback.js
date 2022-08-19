@@ -5,12 +5,13 @@ export default function Feedback(props) {
 
     const handleClick = () => {
         props.clickEvent(0);
-        $('#add_restro').addClass('dotMarked');
     }
 
     return (
         <>
             <h1>Submit Your Feedback</h1>
+            <h6>(1 feedback/day allowed)</h6>
+            <br/>
             <select id="restroName" className="form-select" defaultValue="KFC">
                 <option value="KFC">KFC</option>
                 <option value="McDonald's">McDonald's</option>
@@ -25,7 +26,7 @@ export default function Feedback(props) {
             </select>
             <br/>
             <Stars />
-            <button onClick={handleClick} className="btn btn-primary">Write Feedback</button>
+            <button onClick={handleClick} id="writefeedback" className="btn btn-primary">Write Feedback</button>
         </>
     )
 }

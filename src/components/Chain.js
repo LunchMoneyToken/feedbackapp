@@ -37,22 +37,22 @@ export default function Chain() {
 
                 <div className="fa-stack fa-2x text-center">
                     <i className="fa fa-circle-o fa-stack-2x"></i>
-                    <div><b><span id="wallet_connected" class="dot2"></span></b></div>
+                    <div><b><span id="wallet_connected" className="dot2"></span></b></div>
                 </div>
                 <div className="line-btw"></div>
                 <div className="fa-stack fa-2x text-center">
                     <i className="fa fa-circle-o fa-stack-2x"></i>
-                    <div><b><span id="add_restro" class="dot2"></span></b></div>
+                    <div><b><span id="add_restro" className="dot2"></span></b></div>
                 </div>
                 <div className="line-btw"></div>
                 <div className="fa-stack fa-2x text-center">
                     <i className="fa fa-circle-o fa-stack-2x"></i>
-                    <div><b><span id="receive_mail" class="dot2"></span></b></div>
+                    <div><b><span id="receive_mail" className="dot2"></span></b></div>
                 </div>
                 <div className="line-btw"></div>
                 <div className="fa-stack fa-2x text-center">
                     <i className="fa fa-circle-o fa-stack-2x"></i>
-                    <div><b><span id="received_reward" class="dot2"></span></b></div>
+                    <div><b><span id="received_reward" className="dot2"></span></b></div>
                 </div>
 
             </div>

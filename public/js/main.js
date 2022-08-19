@@ -3,13 +3,22 @@ let feedBackData = {}
 let db
 let eligible = false
 // Firebase configuration
+// const firebaseConfig = {
+//     apiKey: "AIzaSyDLDvv4up4sqgqY56ywCYmJ0z5A6raTacc",
+//     authDomain: "feedback-59934.firebaseapp.com",
+//     projectId: "feedback-59934",
+//     storageBucket: "feedback-59934.appspot.com",
+//     messagingSenderId: "593711442758",
+//     appId: "1:593711442758:web:ce3b84e9bbf64ba9ef1347"
+// };
+
 const firebaseConfig = {
-    apiKey: "AIzaSyDLDvv4up4sqgqY56ywCYmJ0z5A6raTacc",
-    authDomain: "feedback-59934.firebaseapp.com",
-    projectId: "feedback-59934",
-    storageBucket: "feedback-59934.appspot.com",
-    messagingSenderId: "593711442758",
-    appId: "1:593711442758:web:ce3b84e9bbf64ba9ef1347"
+    apiKey: "AIzaSyBOnpimk6YIKsIUcvccH72qZQS4W1eNmtM",
+    authDomain: "feedback-5e5de.firebaseapp.com",
+    projectId: "feedback-5e5de",
+    storageBucket: "feedback-5e5de.appspot.com",
+    messagingSenderId: "880572061052",
+    appId: "1:880572061052:web:e76a69f6c040fab2f540f9"
 };
 
 function uuid(mask = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx') {
@@ -19,15 +28,19 @@ function uuid(mask = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx') {
     });
 }
 
-function check_if_eligible(createdAt){
+function check_if_eligible(createdAt) {
     let currentSeconds = new Date().getTime() / 1000;
     let after24hours = parseInt(createdAt['seconds']) + 86400
     console.log(currentSeconds, after24hours)
-    if(after24hours < currentSeconds){
+    if (after24hours < currentSeconds) {
         // Allow them
         eligible = true
         console.log(currentSeconds, after24hours)
-    }else{
+    } else {
+        addMarked('wallet_connected')
+        addMarked('add_restro')
+        addMarked('receive_mail')
+        $('#writefeedback').prop('disabled', true);
         eligible = false
     }
 }
@@ -63,7 +76,10 @@ async function fetchStamp(walletAddress) {
             if (doc.exists) {
                 // Getting the createdAt time
                 check_if_eligible(doc.data().createdAt)
+            }else{
+                eligible = true
             }
+
         })
         .catch(function (error) {
             console.log("Error getting document:", error);

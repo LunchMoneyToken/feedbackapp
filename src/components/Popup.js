@@ -24,14 +24,14 @@ export default function Popup(props) {
                             <li className="nav-item">
                                 <a className="nl nav-link smText"><i className="fa fa-cog"></i><br />Token List</a>
                             </li>
-                            <li onClick={() => { props.clickEvent(1); $('#add_restro').removeClass('dotMarked'); }} className="nav-item">
+                            <li onClick={() => { props.clickEvent(1); }} className="nav-item">
                                 <a className="nl nav-link smText"><i className="fa fa-times"></i><br />Close</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div >
-            <div className="container">
+            <div className="container hide_it_now">
                 <div className="row">
                     <div className='col-6'>
                         <li onClick={() => setnl(1)} className="nav-item">
@@ -47,7 +47,7 @@ export default function Popup(props) {
                         <li onClick={() => setnl(2)} className="nav-item">
                             <a className={nl == 2 ? 'nav-link nl nl_active' : "nav-link nl"}>Rewards</a>
                         </li>
-                        <li onClick={() => { props.clickEvent(1); $('#add_restro').removeClass('dotMarked'); }} className="nav-item">
+                        <li onClick={() => { props.clickEvent(1); }} className="nav-item">
                             <a className="nl nav-link smText"><i className="fa fa-times"></i><br />Close</a>
                         </li>
                     </div>

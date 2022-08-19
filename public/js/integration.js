@@ -52,8 +52,8 @@ async function switch_network(chainId) {
     });
 }
 
-function addMarked(idName){
-    $('#'+idName).addClass('dotMarked');
+function addMarked(idName) {
+    $('#' + idName).addClass('dotMarked');
 }
 
 function check() {
@@ -78,6 +78,8 @@ function check() {
                     $('#submitForm').click(async (e) => {
                         e.preventDefault();
                         if (eligible === true) {
+                            $('#submitForm').prop('disabled', true);
+
                             feedBackData['restroName'] = $('#restroName').val()
                             feedBackData['restroNum'] = $('#restroNum').val()
                             feedBackData['attendDate'] = $('#attendDate').val()
@@ -85,12 +87,22 @@ function check() {
                             feedBackData['feedbackText'] = $('#feedbackText').val()
                             feedBackData['emailAddress'] = $('#emailAddress').val()
                             feedBackData['starsCount'] = $('#starsCount').text()
+                            alert("Give us a moment we are working on your feedback !!!")
+                            $('#feedbackForm')[0].reset()
+                            
                             await push_it(walletAddress, feedBackData)
                             await updateReward(walletAddress)
-                            location.reload()
+                            sendMail(feedBackData)
 
+
+
+                            // Closing up
+                            alert("Thanks for your feedback !!!")
+                            location.reload()
+                            
+                            
                         } else {
-                            alert("You can give only 1 feedback in one day. Please try again tomorrow...")
+                            alert("You can give only 1 feedback in one day. Please try again tomorrow !!!")
                         }
                     })
 
@@ -142,7 +154,14 @@ $(document).ready(() => {
     init();
     $('#connect_btn').click(async () => { await connectweb3(); })
 
-    $('#submitForm').click(async (e) => { e.preventDefault(); await connectweb3(); })
+    $('#submitForm').click(async (e) => { e.preventDefault(); alert("Connect Wallet in order to continue !!!") })
+
+    $(window).keydown(function (event) {
+        if (event.keyCode == 13) {
+            event.preventDefault();
+            return false;
+        }
+    });
 });
 
 

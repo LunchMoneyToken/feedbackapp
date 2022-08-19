@@ -5,17 +5,17 @@ export default function FeedbackForm() {
                 <div className="row">
                     <div className="col-md-3">
                         <label className="form-input">Restaurant number:</label>
-                        <input id="restroNum" required name="restroNum" type="number"  className="form-control" placeholder="ex:987321" />
+                        <input id="restroNum" required name="restroNum" type="number" className="form-control" placeholder="ex:987321" />
 
                         <br />
 
                         <label className="form-input">Date:</label>
-                        <input id="attendDate" required name="attendDate" type="date"  className="form-control" placeholder="01-01-2022" />
+                        <input id="attendDate" required name="attendDate" type="date" className="form-control" placeholder="01-01-2022" />
 
                         <br />
 
                         <label className="form-input">Time:</label>
-                        <input id="attendTime" required name="attendTime" type="time"  className="form-control" placeholder="01-01-2022" />
+                        <input id="attendTime" required name="attendTime" type="time" className="form-control" placeholder="01-01-2022" />
                     </div>
                     <div className="col-md-8 rmp" style={{ paddingLeft: 40 + 'px' }}>
                         <label>Feedback:</label>
@@ -27,11 +27,11 @@ export default function FeedbackForm() {
                         <br />
                         <input id="emailAddress" required name="emailAddress" className="form-control" placeholder="email@example.com" />
                     </div>
+                    <div className="mx-auto text-center" style={{marginTop: 30+'px'}}>
+                        <button id="submitForm" className="text-center mx-auto btn btn-sm">Submit</button>
+                    </div>
                 </div>
-                <br />
-                <div className="mx-auto text-center">
-                    <button id="submitForm" className="text-center mx-auto btn btn-sm">Connect Wallet</button> 
-                </div>
+
             </form >
         </>
     )
