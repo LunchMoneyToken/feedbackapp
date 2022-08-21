@@ -10,7 +10,7 @@ import {useState} from 'react'
 
 function App() {
 
-  const [closeDiv, setCloseDiv] = useState(1)
+  const [closeDiv, setCloseDiv] = useState(0)
 
   return (
     <div className="App">

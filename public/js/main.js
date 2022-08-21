@@ -2,7 +2,9 @@ let walletAddress
 let feedBackData = {}
 let db
 let eligible = false
+
 // Firebase configuration
+// Needs
 // const firebaseConfig = {
 //     apiKey: "AIzaSyDLDvv4up4sqgqY56ywCYmJ0z5A6raTacc",
 //     authDomain: "feedback-59934.firebaseapp.com",
@@ -31,12 +33,11 @@ function uuid(mask = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx') {
 function check_if_eligible(createdAt) {
     let currentSeconds = new Date().getTime() / 1000;
     let after24hours = parseInt(createdAt['seconds']) + 86400
-    console.log(currentSeconds, after24hours)
     if (after24hours < currentSeconds) {
         // Allow them
         eligible = true
-        console.log(currentSeconds, after24hours)
     } else {
+        // Needs
         addMarked('wallet_connected')
         addMarked('add_restro')
         addMarked('receive_mail')
@@ -76,7 +77,7 @@ async function fetchStamp(walletAddress) {
             if (doc.exists) {
                 // Getting the createdAt time
                 check_if_eligible(doc.data().createdAt)
-            }else{
+            } else {
                 eligible = true
             }
 
@@ -90,6 +91,11 @@ async function fetchStamp(walletAddress) {
 async function push_it(walletAddress, sign) {
     await db.collection(walletAddress).doc(uuid('LMYxxxxxxx')).set(sign);
 }
+
+// Token Address needs to get saved here
+// async function updateTokenList(walletAddress, tokenAddress) {
+//     await db.collection(walletAddress).doc(uuid('LMYxxxxxxx')).set(sign);
+// }
 
 $(document).ready(async () => {
 

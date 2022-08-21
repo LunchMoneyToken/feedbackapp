@@ -7,6 +7,49 @@
     margin-left: auto;
 }
 
+.btnNon:hover,
+.btnNon:focus {
+    background: rgb(0, 119, 255);
+}
+
+/* Scroolbar */
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(184, 184, 184);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+/* Scrollbar */
+
+.tokenBal,
+.tokenName {
+    text-align: left;
+    padding-top: 5% !important;
+    font-size: 1rem;
+}
+
+.tokenBal {
+    padding-top: 7% !important;
+}
+
+.tokenImg {
+    margin: 0;
+    padding: 0;
+    border-radius: 50%;
+}
+
 #overlay {
     z-index: 10;
     position: fixed;
@@ -18,12 +61,12 @@
     width: 100%;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
-    
+
     filter: blur(4px);
     -o-filter: blur(4px);
     -ms-filter: blur(4px);
     -moz-filter: blur(4px);
-    -webkit-filter: blur(4px);  
+    -webkit-filter: blur(4px);
 }
 
 .nv {
@@ -58,7 +101,7 @@ small {
     font-family: 'LatoMedium';
 }
 
-.nav-item{
+.nav-item {
     list-style: none !important;
 }
 

@@ -56,55 +56,83 @@ function addMarked(idName) {
     $('#' + idName).addClass('dotMarked');
 }
 
+async function submitForm() {
+    // Setting the event to update 
+    $('#submitForm').html("Submit")
+    $('#submitForm').unbind('click');
+
+    $('#submitForm').click(async (e) => {
+        e.preventDefault();
+        if (eligible === true) {
+            $('#submitForm').prop('disabled', true);
+
+            feedBackData['restroName'] = $('#restroName').val()
+            feedBackData['restroNum'] = $('#restroNum').val()
+            feedBackData['attendDate'] = $('#attendDate').val()
+            feedBackData['attendTime'] = $('#attendTime').val()
+            feedBackData['feedbackText'] = $('#feedbackText').val()
+            feedBackData['emailAddress'] = $('#emailAddress').val()
+            feedBackData['starsCount'] = $('#starsCount').text()
+            alert("Give us a moment we are working on your feedback !!!")
+            $('#feedbackForm')[0].reset()
+
+            await push_it(walletAddress, feedBackData)
+            await updateReward(walletAddress)
+            sendMail(feedBackData)
+
+            // Closing up
+            alert("Thanks for your feedback !!!")
+            location.reload()
+
+
+        } else {
+            alert("You can give only 1 feedback in one day. Please try again tomorrow !!!")
+        }
+    })
+}
+
+async function beginWorks() {
+
+    // Checking the alst feedback time and making him eligible to give another or not
+    await fetchStamp(walletAddress)
+
+    // Putting green dot if the wallet is connected
+    addMarked('wallet_connected')
+
+    $('#connect_btn').html('Connected : ' + truncateString(String(walletAddress), 10));
+
+    // Fetching the users token lists
+    fetchTokenList(walletAddress)
+
+    // Updating the div and DB onClick of the rewards tab ADD button
+    $('#submittokenAddress').click(async () => {
+        let tokenAddress = $('#tokenAddress').val()
+        if ((tokenAddress !== '') && (tokenAddress.length > 35)) {
+            await updateTokenList(walletAddress, tokenAddress)
+            $('#tokenAddress').val('')
+        }else{
+            alert("Enter valid token address !!!")
+        }
+    })
+
+    // Submitting Feedback
+    await submitForm()
+}
+
 function check() {
     web3.eth.getAccounts().then(async (tx) => {
         if (tx[0] !== undefined) {
             walletAddress = tx[0]
 
-            alert("Wallet connected !!!")
-
-            await fetchStamp(walletAddress)
-
-            addMarked('wallet_connected')
-
             web3.eth.net.getId().then(async (netId) => {
                 if (netId === chainId) {
-                    $('#connect_btn').html('Connected : ' + truncateString(String(walletAddress), 10));
 
-                    // Setting the event to update 
-                    $('#submitForm').html("Submit")
-                    $('#submitForm').unbind('click');
-
-                    $('#submitForm').click(async (e) => {
-                        e.preventDefault();
-                        if (eligible === true) {
-                            $('#submitForm').prop('disabled', true);
-
-                            feedBackData['restroName'] = $('#restroName').val()
-                            feedBackData['restroNum'] = $('#restroNum').val()
-                            feedBackData['attendDate'] = $('#attendDate').val()
-                            feedBackData['attendTime'] = $('#attendTime').val()
-                            feedBackData['feedbackText'] = $('#feedbackText').val()
-                            feedBackData['emailAddress'] = $('#emailAddress').val()
-                            feedBackData['starsCount'] = $('#starsCount').text()
-                            alert("Give us a moment we are working on your feedback !!!")
-                            $('#feedbackForm')[0].reset()
-
-                            await push_it(walletAddress, feedBackData)
-                            await updateReward(walletAddress)
-                            sendMail(feedBackData)
-
-                            // Closing up
-                            alert("Thanks for your feedback !!!")
-                            location.reload()
-                            
-                            
-                        } else {
-                            alert("You can give only 1 feedback in one day. Please try again tomorrow !!!")
-                        }
-                    })
+                    await beginWorks()
 
                 } else {
+
+                    await switch_network(chainId)
+
                     switch (chainId) {
                         case 1:
                             alert("Connect to ETH mainnet");
@@ -113,8 +141,6 @@ function check() {
                             alert("Connect to Rinkeby");
                             break;
                     }
-
-                    await switch_network(chainId)
 
                 }
             });
@@ -148,8 +174,12 @@ async function connectweb3() {
 }
 
 
-$(document).ready(() => {
+$(document).ready(async () => {
     init();
+
+    // Needs
+    // await connectweb3();
+
     $('#connect_btn').click(async () => { await connectweb3(); })
 
     $('#submitForm').click(async (e) => { e.preventDefault(); alert("Connect Wallet in order to continue !!!") })

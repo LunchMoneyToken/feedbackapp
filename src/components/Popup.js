@@ -5,7 +5,7 @@ import $ from 'jquery'
 
 export default function Popup(props) {
 
-    const [nl, setnl] = useState(1)
+    const [nl, setnl] = useState(2)
 
     return (
         <div id="backdropCon" className={props.closeVal == 1 ? "col-md-8 hide" : "col-md-8"}>
@@ -52,11 +52,14 @@ export default function Popup(props) {
                         </li>
                     </div>
                 </div>
-                <hr/>
+                <hr />
             </div >
-            <FeedbackForm />
-            <br />
-            <Rewards />
+            <div style={{display: nl == 1 ? 'block': 'none'}}>
+                <FeedbackForm />
+            </div>
+            <div style={{display: nl == 2 ? 'block': 'none'}}>
+                <Rewards />
+            </div>
         </div >
     )
 }
