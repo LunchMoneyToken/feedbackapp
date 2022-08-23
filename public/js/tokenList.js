@@ -17,7 +17,7 @@ async function addtoDiv(logo, name, price, type) {
                 <h6 className="tokenBal pt-3">`+type+`</h6>
             </div>
             <div class="col-4 text-right ml-auto">
-                <h6 className="tokenBal pt-3">`+price+`</h6>
+                <h6 className="tokenBal pt-3">$`+price+`</h6>
             </div>
         </div>
         `
