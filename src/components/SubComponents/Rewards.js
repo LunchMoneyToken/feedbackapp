@@ -5,7 +5,7 @@ export default function FeedbackForm() {
                 <div id="tokens" className="col-md-7 text-center mx-auto" style={{ height: 200 + 'px', overflowX: 'hidden', padding: '0px 20px 20px 20px' }}>
                 </div>
                 <div className="col-md-5">
-                    <div id="token_listCon" style={{ background: 'white', color: 'black', borderRadius: 10 + 'px', padding: 20 + 'px', marginTop: 15+'px' }}>
+                    <div id="token_listCon" style={{ background: 'white', color: 'black', borderRadius: 10 + 'px', padding: 20 + 'px', marginTop: 15 + 'px' }}>
                         <h1 style={{ fontSize: 1.5 + 'rem' }}>Add Tokens</h1>
                         {/* <br />
                         <div className="row" style={{ padding: '0px 10px 0px 10px' }}>

@@ -101,8 +101,12 @@ async function beginWorks() {
 
     $('#connect_btn').html('Connected : ' + truncateString(String(walletAddress), 10));
 
+    // Updating current block
+    await getprevBlockNum()
+
     // Fetching the users token lists
     await fetchTokenList(walletAddress)
+    
 
     // Updating the div and DB onClick of the rewards tab ADD button
     $('#submittokenAddress').click(async () => {

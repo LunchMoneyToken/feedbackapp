@@ -12,6 +12,13 @@
     background: rgb(0, 119, 255);
 }
 
+.fa-caret-down{
+    color: red;
+}
+.fa-caret-up{
+    color: rgb(0, 255, 0);
+}
+
 /* Scroolbar */
 ::-webkit-scrollbar {
     width: 2px;
@@ -41,6 +48,7 @@
 }
 
 .tokenBal {
+    text-align: right !important;
     padding-top: 7% !important;
 }
 

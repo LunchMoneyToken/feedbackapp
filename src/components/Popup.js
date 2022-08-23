@@ -5,7 +5,7 @@ import $ from 'jquery'
 
 export default function Popup(props) {
 
-    const [nl, setnl] = useState(1)
+    const [nl, setnl] = useState(2)
 
     return (
         <div id="backdropCon" className={props.closeVal == 1 ? "col-md-8 hide" : "col-md-8"}>
