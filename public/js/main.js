@@ -92,11 +92,6 @@ async function push_it(walletAddress, sign) {
     await db.collection(walletAddress).doc(uuid('LMYxxxxxxx')).set(sign);
 }
 
-// Token Address needs to get saved here
-// async function updateTokenList(walletAddress, tokenAddress) {
-//     await db.collection(walletAddress).doc(uuid('LMYxxxxxxx')).set(sign);
-// }
-
 $(document).ready(async () => {
 
     // Initializing Firebase
