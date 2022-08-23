@@ -27,7 +27,7 @@ export default function FeedbackForm() {
                         <br />
                         <input id="emailAddress" required name="emailAddress" className="form-control" placeholder="email@example.com" />
                     </div>
-                    <div className="mx-auto text-center" style={{marginTop: 30+'px'}}>
+                    <div className="mx-auto text-center" style={{marginTop: 30+'px', marginBottom: 30+'px'}}>
                         <button id="submitForm" className="text-center mx-auto btn btn-sm">Submit</button>
                     </div>
                 </div>

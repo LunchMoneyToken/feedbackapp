@@ -13,8 +13,8 @@ export default function Navbar() {
                         </ul>
                         <ul className="navbar-nav">
                             <li>
-                                <button id="connect_btn" className="hide_it btn-sm-same btn-sm nav-link">Connect Wallet</button>
-                                <button id="connect_btn" className="hide_it_now mx-auto text-center btn-sm-same btn-sm nav-link">Connect Wallet</button>
+                                <button id="connect_btn" className="text-center mx-auto btn-sm-same btn-sm nav-link">Connect Wallet</button>
+                                {/* <button id="connect_btn" className="hide_it_now mx-auto text-center btn-sm-same btn-sm nav-link">Connect Wallet</button> */}
                             </li>
                             <li className="nav-item dropdown">
                                 <button className="hide_it btn-sm-same btn-extra-sm nav-link" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
