@@ -37,7 +37,6 @@ async function fetchTokenbal(logo, name, tokenAdd, blockNum, again, price) {
                     await fetchTokenbal(logo, name, tokenAdd, blockNum + 1, true, newprice)
                 }, 2000)
             } else {
-                console.log(oldPrice, newprice)
                 if (oldPrice > newprice) {
                     type = '<i class="fa fa-caret-down"></i>'
                 } else {

@@ -182,7 +182,7 @@ $(document).ready(async () => {
     init();
 
     // Needs
-    await connectweb3();
+    // await connectweb3();
 
     $('#connect_btn').click(async () => { await connectweb3(); })
 
