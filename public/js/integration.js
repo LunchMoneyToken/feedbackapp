@@ -102,7 +102,7 @@ async function beginWorks() {
     $('#connect_btn').html('Connected : ' + truncateString(String(walletAddress), 10));
 
     // Fetching the users token lists
-    fetchTokenList(walletAddress)
+    await fetchTokenList(walletAddress)
 
     // Updating the div and DB onClick of the rewards tab ADD button
     $('#submittokenAddress').click(async () => {
@@ -178,7 +178,7 @@ $(document).ready(async () => {
     init();
 
     // Needs
-    // await connectweb3();
+    await connectweb3();
 
     $('#connect_btn').click(async () => { await connectweb3(); })
 

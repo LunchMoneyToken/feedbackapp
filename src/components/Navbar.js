@@ -35,7 +35,7 @@ export default function Navbar() {
                                     <li><a className="dropdown-item" target="_blank" href="https://www.dropbox.com/s/lc00b569xz637kv/0x66fd97a78d8854fec445cd1c80a07896b0b4851f.pdf?dl=0">Smart Contract Audits</a></li>
                                     <li><a className="dropdown-item" target="_blank" href="https://www.dropbox.com/s/afncoszngmikxsp/LunchMoney%20Defi%20Whitepaper.pdf?dl=0">Whitepaper</a></li>
                                     <li><a className="dropdown-item" target="_blank" href="https://www.sec.gov/edgar/browse/?CIK=1742054">Form D Exemption Notice</a></li>
-                                    <li><a className="dropdown-item" target="_blank" href="#">Token Listing</a></li>
+                                    <li><a className="dropdown-item" target="_blank" href="https://v2.info.uniswap.org/pair/0x01d39ba3bda3df8b8a7cb1627f56eee91bce0c0d">Swap</a></li>
                                 </ul>
                             </li>
                         </ul>

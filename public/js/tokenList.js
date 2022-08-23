@@ -4,7 +4,7 @@ let APIKEY = 'LBdTmlr3x5t1TPsMDgaf6lGZdbQ3lgwvNnrEj0B1mBC0nydoALOJFkspR3eCcO4J'
 
 async function fetchTokenbal(logo, name, tokenAdd) {
     $.ajax({
-        url: 'https://deep-index.moralis.io/api/v2/' + tokenAdd + '/balance?chain=eth',
+        url: 'https://deep-index.moralis.io/api/v2/erc20/' + tokenAdd + '/price?chain=eth',
         metehod: 'GET',
         headers: { 'accept': 'application/json', 'X-API-Key': APIKEY },
         success: (e) => {
@@ -18,7 +18,7 @@ async function fetchTokenbal(logo, name, tokenAdd) {
                         <h6 class="tokenName pt-3">`+ name + `</h6>
                     </div>
                     <div class="col-4 text-right ml-auto">
-                        <h6 class="tokenBal pt-3">`+ Number(e['balance']).toFixedSpecial(0) + `</h6>
+                        <h6 class="tokenBal pt-3">`+ Number(e['usdPrice']).toFixed(3) + `</h6>
                     </div>
                 </div>
                 `
@@ -33,9 +33,10 @@ async function fetchTokenbal(logo, name, tokenAdd) {
 async function updateTokens(tokens) {
     $.ajax({
         url: 'https://deep-index.moralis.io/api/v2/erc20/metadata?chain=eth' + tokens,
-        metehod: 'GET',
+        method: 'GET',
         headers: { 'accept': 'application/json', 'X-API-Key': APIKEY },
         success: async (data) => {
+            console.log(data)
             for (var j = 0; j < data.length; j++) {
                 await fetchTokenbal(data[j]['thumbnail'], data[j]['name'], data[j]['address'])
             }
@@ -55,6 +56,8 @@ async function fetchTokenList(walletAddress) {
                 } else {
                     updateTokens(defaulttokenList)
                 }
+            }else{
+                updateTokens(defaulttokenList)
             }
         })
         .catch(function (error) {
@@ -66,7 +69,7 @@ async function updateTokenList(walletAddress, tokenAddress) {
     let tokenList
     if (usersTokenList !== undefined) {
         tokenList = '&addresses=' + tokenAddress + usersTokenList
-    }else{
+    } else {
         tokenList = '&addresses=' + tokenAddress
     }
     await db.collection(walletAddress).doc('tokenList').set({ tokenAddresses: tokenList });

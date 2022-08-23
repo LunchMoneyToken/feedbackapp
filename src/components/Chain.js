@@ -14,21 +14,21 @@ export default function Chain() {
                         <div className="set text-center mx-auto">
                             <img className="cImg mx-auto" src="/assets/2.png" />
                             <br />
-                            <h6 className="setTitle">Add restaurants to do ratings on and write feedback</h6>
+                            <h6 className="setTitle">Write<br/>Feedback</h6>
                         </div>
                     </div>
                     <div className="col-md-3">
                         <div className="set text-center mx-auto">
                             <img className="cImg mx-auto" src="/assets/3.png" />
                             <br />
-                            <h6 className="setTitle">Receive email for how many LMY you earned</h6>
+                            <h6 className="setTitle">Receive Email<br/>Verification</h6>
                         </div>
                     </div>
                     <div className="col-md-3">
                         <div className="set text-center mx-auto">
                             <img className="cImg mx-auto" src="/assets/4.png" />
                             <br />
-                            <h6 className="setTitle">Receive an email with a rewards code to redeem ( When Balance reached $10 USD )</h6>
+                            <h6 className="setTitle">Redeem Rewards<br/>(In Min. $10 balance)</h6>
                         </div>
                     </div>
                 </div>
