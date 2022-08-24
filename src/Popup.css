@@ -47,6 +47,35 @@
     font-size: 1rem;
 }
 
+tr, td{
+    padding: 5px 10px 5px 10px;
+}
+
+.dropdown{
+    margin-left: 5px;
+}
+
+.textabs{
+    position: absolute;
+    right: 0;
+}
+
+td > a{
+    text-decoration: none !important;
+    color: rgb(243, 243, 243);
+}
+
+td > a:hover{
+    color: white !important;
+}
+
+
+.menuicons{
+    text-align: right;
+    width: 20px;
+    height: 20px;
+}
+
 .tokenBal {
     padding-top: 7% !important;
 }
