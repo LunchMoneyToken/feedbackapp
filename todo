@@ -4,37 +4,17 @@ Icantmakethisstuffup!
 adrian@lunchmoney.io
 (Test@123)
 
-WETH -https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2
+Claim Rewards Work:
 
-0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
+1) Add a menu to show the balance wiht a button names as *Withdraw*
+    On clicking *Withdraw button* 
+    *Show progress bar*
+    -> run the _HASH_ func
+    -> cut the 10$ from firebase
+    -> run the _getCode_ func
+    -> sendMail to the client
+    *hide progress bar and alert client that _Withdraw Successful_*
 
-MATIC -https://etherscan.io/token/0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0
-
-0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0
-
-USDC -https://etherscan.io/token/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48
-
-0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48
-
-UNI-https://etherscan.io/token/0x1f9840a85d5af5bf1d1762f925bdaddc4201f984
-
-0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984
-
-USDT-https://etherscan.io/token/0xdac17f958d2ee523a2206206994597c13d831ec7
-0xdAC17F958D2ee523a2206206994597C13D831ec7
-
-LINK-https://etherscan.io/token/0x514910771af9ca656af840dff83e8264ecf986ca
-
-0x514910771AF9Ca656af840dff83E8264EcF986CA
-
-WBTC-https://etherscan.io/token/0x2260fac5e5542a773aa44fbcfedf7c193bc2c599
-
-0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
-
-SHIB-https://etherscan.io/token/0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE
-
-0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE
-
-BINANCE USD- https://etherscan.io/token/0x4fabb145d64652a948d72533023f6e7a623c7c53
-
-0x4Fabb145d64652a948d72533023f6E7A623C7C53
+2) Claim Reward:
+    -> Fetch the input code
+    -> run the getReward func

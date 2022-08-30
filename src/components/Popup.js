@@ -8,7 +8,7 @@ export default function Popup(props) {
     const [nl, setnl] = useState(1)
 
     return (
-        <div id="backdropCon" className={props.closeVal == 1 ? "col-md-8 hide" : "col-md-8"}>
+        <div id="backdropCon" className={props.closeVal == 1 ? "col-md-8" : "col-md-8 hide"}>
             <div className="nv navbar-expand-lg">
                 <div className="container">
                     <div className="nvs collapse navbar-collapse" id="navbarSupportedContent">
@@ -24,7 +24,7 @@ export default function Popup(props) {
                             <li className="nav-item">
                                 <a className="nl nav-link smText"><i className="fa fa-cog"></i><br />Token List</a>
                             </li>
-                            <li onClick={() => { props.clickEvent(1); }} className="nav-item">
+                            <li onClick={() => { props.clickEvent(-1); }} className="nav-item">
                                 <a className="nl nav-link smText"><i className="fa fa-times"></i><br />Close</a>
                             </li>
                         </ul>
@@ -47,7 +47,7 @@ export default function Popup(props) {
                         <li onClick={() => setnl(2)} className="nav-item">
                             <a className={nl == 2 ? 'nav-link nl nl_active' : "nav-link nl"}>Rewards</a>
                         </li>
-                        <li onClick={() => { props.clickEvent(1); }} className="nav-item">
+                        <li onClick={() => { props.clickEvent(-1); }} className="nav-item">
                             <a className="nl nav-link smText"><i className="fa fa-times"></i><br />Close</a>
                         </li>
                     </div>

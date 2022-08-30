@@ -1,27 +1,27 @@
 let walletAddress
 let feedBackData = {}
-let db
+let db, userBalance;
 let eligible = false
 
 // Firebase configuration
-// Needs
-// const firebaseConfig = {
-//     apiKey: "AIzaSyDLDvv4up4sqgqY56ywCYmJ0z5A6raTacc",
-//     authDomain: "feedback-59934.firebaseapp.com",
-//     projectId: "feedback-59934",
-//     storageBucket: "feedback-59934.appspot.com",
-//     messagingSenderId: "593711442758",
-//     appId: "1:593711442758:web:ce3b84e9bbf64ba9ef1347"
-// };
-
 const firebaseConfig = {
-    apiKey: "AIzaSyBOnpimk6YIKsIUcvccH72qZQS4W1eNmtM",
-    authDomain: "feedback-5e5de.firebaseapp.com",
-    projectId: "feedback-5e5de",
-    storageBucket: "feedback-5e5de.appspot.com",
-    messagingSenderId: "880572061052",
-    appId: "1:880572061052:web:e76a69f6c040fab2f540f9"
+    apiKey: "AIzaSyDLDvv4up4sqgqY56ywCYmJ0z5A6raTacc",
+    authDomain: "feedback-59934.firebaseapp.com",
+    projectId: "feedback-59934",
+    storageBucket: "feedback-59934.appspot.com",
+    messagingSenderId: "593711442758",
+    appId: "1:593711442758:web:ce3b84e9bbf64ba9ef1347"
 };
+
+// Clients
+// const firebaseConfig = {
+//     apiKey: "AIzaSyBOnpimk6YIKsIUcvccH72qZQS4W1eNmtM",
+//     authDomain: "feedback-5e5de.firebaseapp.com",
+//     projectId: "feedback-5e5de",
+//     storageBucket: "feedback-5e5de.appspot.com",
+//     messagingSenderId: "880572061052",
+//     appId: "1:880572061052:web:e76a69f6c040fab2f540f9"
+// };
 
 function uuid(mask = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx') {
     return `${mask}`.replace(/[xy]/g, function (c) {
@@ -37,7 +37,6 @@ function check_if_eligible(createdAt) {
         // Allow them
         eligible = true
     } else {
-        // Needs
         addMarked('wallet_connected')
         addMarked('add_restro')
         addMarked('receive_mail')
@@ -50,23 +49,39 @@ async function setReward(walletAddress, amt) {
     await db.collection(walletAddress).doc('reward').set({ earned: amt, createdAt: new Date() });
 }
 
-async function updateReward(walletAddress) {
+function setBalance(val){
+    userBalance = val
+    $('#earned').html(userBalance)
+    $('#earnedCon').removeClass('hide')
+}
+
+async function updateReward(walletAddress, type) {
     await db.collection(walletAddress)
         .doc('reward')
         .get()
         .then(async (doc) => {
-            if (doc.exists) {
-                // Updating the reward
-                await setReward(walletAddress, parseInt(doc.data().earned) + 1)
+
+            if (type == true) {
+                if (doc.exists) {
+                    setBalance(parseInt(doc.data().earned))
+                } else {
+                    setBalance(0)
+                }
             } else {
-                // Setting Reward for the first time
-                await setReward(walletAddress, 1)
+                if (doc.exists) {
+                    // Updating the reward
+                    await setReward(walletAddress, parseInt(doc.data().earned) + 1)
+                    setBalance(parseInt(doc.data().earned) + 1)
+                } else {
+                    // Setting Reward for the first time
+                    await setReward(walletAddress, 1)
+                    setBalance(1)
+                }
             }
         })
         .catch(function (error) {
             console.log("Error getting document:", error);
         });
-
 }
 
 async function fetchStamp(walletAddress) {
@@ -85,7 +100,6 @@ async function fetchStamp(walletAddress) {
         .catch(function (error) {
             console.log("Error getting document:", error);
         });
-
 }
 
 async function push_it(walletAddress, sign) {

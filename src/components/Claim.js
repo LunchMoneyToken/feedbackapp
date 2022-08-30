@@ -5,7 +5,7 @@ export default function Feedback() {
                 <h1>Claim Your Rewards</h1>
                 <br/>
                 <div className="form-group">
-                    <input id="lmycode" type="text"  className="form-control fc" placeholder="Enter LMY Rewards Code" />
+                    <input id="redeemCode" type="text"  className="form-control fc" placeholder="Enter LMY Rewards Code" />
                 </div>
                 <br/>
                 <button className="btn btn-primary">Submit</button>
