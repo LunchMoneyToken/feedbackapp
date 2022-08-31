@@ -1,111 +1,94 @@
 let redeemData = {}
+let withdrawn
 
-function alertError() {
-    alert("Something went wrong in our side, Please contact admin if your money deducted !!!")
+async function withdraw() {
+    userBalance = userBalance-10
+    await db.collection(walletAddress).doc('reward').update({ earned: userBalance }).then(async () => {
+        withdrawn = true        
+        setBalance(userBalance)
+    }).catch((e) => {
+        alert("Something went wrong on our side !!!")
+    });
 }
 
-async function hashFunc() {
-    await contract.methods.hash()
-        .send({
-            from: walletAddress
-        }).then(function (res, err) {
+async function mainVerifications() {
+    // cut the 10$ from firebase
+    await withdraw()
+    if (withdrawn == true) {
+        //run the _HASH_ func
+        await contract.methods.hash().send({ from: walletAddress }).then(async (res, err) => {
             if (res) {
-                return true
+                // viewCode func
+                await contract.methods.viewCode(walletAddress).call().then(async (res, err) => {
+                    if (res) {
+                        redeemData['redeemcode'] = res
+                        // sendMail to the client
+                        emailjs.send("service_zergj1h", 'template_7nf9wa5', redeemData, 'mczNUKgXiFaj8nhbj').then(function () {
+                            addMarked('received_reward')
+                            $('#overlay').hide()
+                            $('#Popup2').hide()
+                            alert('YOU HAVE SUCCESSFULLY WITHDRAWN $10 REDEEM CODE !!!');
+                        }, function (error) {
+                            alert("Unable to send email at the moment here is your redeem code: " + res)
+                        });
+                    } else {
+                        alert("Unable to get the redeem Code !!!")
+                    }
+                })
             } else {
-                alertError()
+                alert("Hash Function Not Working !!!")
             }
         });
-}
+    }
 
-async function withdrawnRequest() {
-    await db.collection(walletAddress)
-        .doc('reward')
-        .get()
-        .then(async (doc) => {
-            // Updating the reward
-            await setReward(walletAddress, parseInt(doc.data().earned) - 10)
-        })
-        .catch(function (error) {
-            return false
-        });
 }
-
-async function getRedeemCode(walletAddress) {
-    await contract.methods.viewCode(walletAddress)
-        .call().then(function (res, err) {
-            if (res) {
-                redeemData['redeemcode'] = res
-                console.log(res)
-                return true
-            } else {
-                return false
-            }
-        });
-}
-
 
 $(document).ready(async () => {
-
-
     $('#withdrawBtn').click(async () => {
+        $('#withdrawBtn').prop("disabled", true)
         if (userBalance > 9) {
             let mailtemp = $('#emailAddress2').val()
             if (mailtemp !== null) {
                 redeemData['emailAddress'] = mailtemp
-                //run the _HASH_ func
-                await hashFunc().then((e) => {
-                    console.log(e)
-                    // cut the 10$ from firebase
-                    // await withdrawnRequest().then(() => {
-                    //     // run the _getCode_ func
-                    //     await getRedeemCode().then(() => {
-                    //         // sendMail to the client
-                    //         await sendRedeemMail().then(() => {
-                    //             // *hide progress bar and alert client that _Withdraw Successful_*
-                    //         })
-                    //     })
-                    // });
-                })
+                await mainVerifications()
             } else {
+                $('#withdrawBtn').prop("disabled", false)
                 alert("Enter your email in order to proceed !!!")
             }
         } else {
+            $('#withdrawBtn').prop("disabled", false)
             alert("You must have more than $10 in order to use this !!!")
         }
+    });
+
+    $('#claimBtn').click(async () => {
+        $('#claimBtn').prop("disabled", true)
+        let redeemCode = $('#redeemCode').val()
+        if (redeemCode !== '') {
+            await db.collection("password").doc('pass').get().then(async (doc) => {
+                if (doc.exists) {
+                    $('#claimWarn').html("Wait for the transaction to complete !!!")
+                    // run the getrewards func
+                    await contract.methods.getreward(redeemCode, doc.data().password)
+                        .send({
+                            from: walletAddress
+                        }).then(function (res, err) {
+                            if (res) {
+                                alert("TOKENS CLAIMED SUCCESSFULLY!!!")
+                                location.reload()
+                            } else {
+                                alert("CLAIMED FAILED!!!")
+                            }
+                        });
+                }
+            }).catch(function (error) {
+                $('#claimBtn').prop("disabled", false)
+                console.log("Error getting document:", error);
+            });
+        } else {
+            $('#claimBtn').prop("disabled", false)
+            alert("Enter a valid redeem code to claim !!!")
+        }
     })
+
 });
-
-async function getKey() {
-    await db.collection("password")
-        .doc('pass')
-        .get()
-        .then(async (doc) => {
-            if (doc.exists) {
-                let key = doc.data().password
-                console.log(key)
-                return key
-            }
-        })
-        .catch(function (error) {
-            console.log("Error getting document:", error);
-            return null
-        });
-}
-
-$('#claimBtn').click(async () => {
-    let redeemCode = $('#redeemCode').val()
-    const keyCode = await getKey()
-
-    //run the getrewards func
-    await contract.methods.getreward(redeemCode, keyCode())
-        .send({
-            from: user_address,
-            value: final_wei_Val
-        }).then(function (res, err) {
-            if (res) {
-                alert("CLAIMED SUCCESSFULLY!")
-            } else {
-                alert("CLAIMED FAILED!")
-            }
-        });
-})

@@ -24,7 +24,7 @@ export default function Navbar(props) {
                                 <button id="connect_btn" className="text-center mx-auto btn-sm-same btn-sm nav-link">Connect Wallet</button>
                             </li>
                             <li id="earnedCon" className='hide' style={{marginLeft: 5+'px'}}>
-                                <button onClick={handleClick} className="text-center mx-auto btn-sm-same btn-extra-sm nav-link">$ <span id="earned">0</span></button>
+                                <button onClick={handleClick} className="text-center mx-auto btn-sm-same btn-extra-sm nav-link">$<span id="earned">0</span></button>
                             </li>
                             <li className="nav-item dropdown">
                                 <button className="mx-auto text-center btn-sm-same btn-extra-sm nav-link" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

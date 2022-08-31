@@ -14,6 +14,7 @@ const firebaseConfig = {
 };
 
 // Clients
+// Needs
 // const firebaseConfig = {
 //     apiKey: "AIzaSyBOnpimk6YIKsIUcvccH72qZQS4W1eNmtM",
 //     authDomain: "feedback-5e5de.firebaseapp.com",
