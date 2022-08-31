@@ -15,6 +15,7 @@ async function mainVerifications() {
     // cut the 10$ from firebase
     await withdraw()
     if (withdrawn == true) {
+        alert("Wait for the transaction to complete !!!")
         //run the _HASH_ func
         await contract.methods.hash().send({ from: walletAddress }).then(async (res, err) => {
             if (res) {

@@ -18,7 +18,3 @@ Claim Rewards Work:
 2) Claim Reward:
     -> Fetch the input code
     -> run the getReward func
-
-*Show progress bar*
-*Hide progress bar*
-remove the overlay adn the con
