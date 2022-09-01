@@ -57,7 +57,7 @@ async function submitForm() {
             feedBackData['feedbackText'] = $('#feedbackText').val()
             feedBackData['emailAddress'] = $('#emailAddress').val()
             feedBackData['starsCount'] = $('#starsCount').text()
-            alert("Give us a moment we are working on your feedback !!!")
+            alert("Your feedback is processing.")
             $('#feedbackForm')[0].reset()
 
             await push_it(walletAddress, feedBackData)
@@ -65,7 +65,7 @@ async function submitForm() {
             sendMail(feedBackData)
 
             // Closing up
-            alert("Thanks for your feedback !!!")
+            alert("Your feedback is complete.")
             location.reload()
 
 

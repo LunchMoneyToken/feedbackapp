@@ -15,7 +15,7 @@ async function mainVerifications() {
     // cut the 10$ from firebase
     await withdraw()
     if (withdrawn == true) {
-        alert("Wait for the transaction to complete !!!")
+        alert("Redeem transaction is processing...")
         //run the _HASH_ func
         await contract.methods.hash().send({ from: walletAddress }).then(async (res, err) => {
             if (res) {
@@ -28,7 +28,7 @@ async function mainVerifications() {
                             addMarked('received_reward')
                             $('#overlay').hide()
                             $('#Popup2').hide()
-                            alert('YOU HAVE SUCCESSFULLY WITHDRAWN $10 REDEEM CODE !!!');
+                            alert('Withdrawal request complete.');
                         }, function (error) {
                             alert("Unable to send email at the moment here is your redeem code: " + res)
                         });
@@ -58,7 +58,7 @@ $(document).ready(async () => {
             }
         } else {
             $('#withdrawBtn').prop("disabled", false)
-            alert("You must have more than $10 in order to use this !!!")
+            alert("The minimum for withdrawal is $10 LMY")
         }
     });
 
@@ -68,17 +68,17 @@ $(document).ready(async () => {
         if (redeemCode !== '') {
             await db.collection("password").doc('pass').get().then(async (doc) => {
                 if (doc.exists) {
-                    $('#claimWarn').html("Wait for the transaction to complete !!!")
+                    $('#claimWarn').html("Redeem transaction is processing...")
                     // run the getrewards func
                     await contract.methods.getreward(redeemCode, doc.data().password)
                         .send({
                             from: walletAddress
                         }).then(function (res, err) {
                             if (res) {
-                                alert("TOKENS CLAIMED SUCCESSFULLY!!!")
+                                alert("Redeem transaction is complete.")
                                 location.reload()
                             } else {
-                                alert("CLAIMED FAILED!!!")
+                                alert("Redeem transaction failed.")
                             }
                         });
                 }
@@ -88,7 +88,7 @@ $(document).ready(async () => {
             });
         } else {
             $('#claimBtn').prop("disabled", false)
-            alert("Enter a valid redeem code to claim !!!")
+            alert("Please enter a valid rewards code.")
         }
     })
 
