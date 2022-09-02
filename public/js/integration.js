@@ -173,7 +173,7 @@ $(document).ready(async () => {
 
     $('#connect_btn').click(async () => { await connectweb3(); })
 
-    $('#submitForm').click(async (e) => { e.preventDefault(); alert("Connect Wallet in order to continue !!!") })
+    $('#submitForm').click(async (e) => { e.preventDefault(); alert("Please connect wallet.") })
 
     $(window).keydown(function (event) {
         if (event.keyCode == 13) {
