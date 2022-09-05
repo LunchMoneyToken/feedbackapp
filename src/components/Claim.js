@@ -3,7 +3,7 @@ export default function Feedback() {
         <div className="row">
             <div className="col-md-9 claimCon">
                 <h1>Claim Your Rewards</h1>
-                <p style={{color: 'red'}} id="claimWarn"></p>
+                <p style={{color: 'red'}} id="claimWarn">Gas is required to make withdrawals.</p>
                 <br/>
                 <div className="form-group">
                     <input id="redeemCode" type="text"  className="form-control fc" placeholder="Enter LMY Rewards Code" />
