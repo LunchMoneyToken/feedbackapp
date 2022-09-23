@@ -70,7 +70,7 @@ async function submitForm() {
 
 
         } else {
-            alert("You can give only 1 feedback in one day. Please try again tomorrow !!!")
+            alert("Only one feedback per customer is allowed every 24 hours.")
         }
     })
 }

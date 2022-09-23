@@ -14,7 +14,6 @@ let eligible = false
 // };
 
 // Clients
-// Needs
 const firebaseConfig = {
     apiKey: "AIzaSyBOnpimk6YIKsIUcvccH72qZQS4W1eNmtM",
     authDomain: "feedback-5e5de.firebaseapp.com",
@@ -34,6 +33,7 @@ function uuid(mask = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx') {
 function check_if_eligible(createdAt) {
     let currentSeconds = new Date().getTime() / 1000;
     let after24hours = parseInt(createdAt['seconds']) + 86400
+    console.log(after24hours, currentSeconds)
     if (after24hours < currentSeconds) {
         // Allow them
         eligible = true
