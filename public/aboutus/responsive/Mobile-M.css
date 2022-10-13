@@ -1,0 +1,179 @@
+.logobg {
+  height: 49px;
+  margin-left: 21px;
+  margin-top: 8px;
+}
+.logo {
+  top: 12px;
+  left: 21px;
+}
+.content {
+  padding: 13px 117px 0px 11px;
+}
+.content h2 {
+  font-size: 1.2rem;
+}
+.content a button {
+  color: white;
+  padding: 3px 14px;
+  border-radius: 18px;
+  background-color: blue;
+  margin-top: -18px;
+  font-size: 13px;
+  margin-left: 0px;
+}
+.textcontent {
+  width: 98%;
+  margin-top: -2px;
+}
+.h4tag {
+  font-size: 0.75rem !important;
+}
+.h3Tag {
+  font-size: 21px;
+}
+.houseImage {
+  height: 93px;
+  right: 20px;
+}
+.coin1 {
+  position: absolute;
+  top: 117px;
+  right: 98px;
+  height: 36px;
+}
+.coin1Logo {
+  position: absolute;
+  top: 120px;
+  right: 106px;
+  height: 30px;
+}
+.coin2 {
+  position: absolute;
+  top: 97px;
+  right: 13px;
+  height: 25px;
+}
+.coin2Logo {
+  top: 99px;
+  right: 24px;
+  height: 20px;
+}
+
+.main::after {
+  height: 33%;
+}
+.partner {
+  padding: 0px 18px 0px 15px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+.partners {
+  height: 41px;
+  padding: 1px 11px;
+  justify-content: center;
+  display: flex;
+}
+.company {
+  font-size: 25px !important;
+}
+.secondContainer {
+  height: 43vh;
+}
+.balancer {
+  height: 16px !important;
+}
+.partners {
+  height: 41px;
+  padding: 1px 11px;
+}
+.sushiswap {
+  height: 17px !important;
+  margin-left: 109px;
+}
+
+.foglory {
+  height: 16px !important;
+}
+.uniswap {
+  height: 16px !important;
+  margin-top: 12px;
+  margin-left: -14px;
+}
+.zerion {
+  height: 19px !important;
+}
+.partner {
+  padding: 9px 11px 0px 22px;
+}
+
+.zapper {
+  height: 19px !important;
+  margin-left: 15px;
+}
+
+.companyDiv {
+  padding: 3px 6px 0px 0px;
+  width: 83vw;
+  height: 38%;
+  margin: 0px 26px;
+}
+#coinbase {
+  height: 15px !important;
+}
+.companyimg1 {
+  height: 55px;
+  margin-top: -10px;
+  margin-left: -16px;
+}
+#mew {
+  margin-top: 9px;
+  height: 16px;
+}
+.kyber {
+  height: 27px !important;
+  margin-top: 4px;
+  margin-left: -6px !important;
+}
+
+#more {
+  height: 16px !important;
+}
+#zelcore {
+  height: 30px;
+}
+.content p {
+  color: white;
+  font-size: 0.8rem;
+}
+.companylogo {
+  height: 43px;
+  padding: 0px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heightwidth {
+  width: 61px;
+  height: 23px;
+}
+.smallimg {
+  width: 34px;
+}
+.div-col {
+  padding: 0px 6px;
+  margin: 14px 0px;
+}
+.secondContainer {
+  height: 38vh;
+}
+.cheems{
+  width: 29px;
+
+}
+.trustwallet {
+  width: 73px;
+  height: 57px;
+  margin-top: -12px;
+}

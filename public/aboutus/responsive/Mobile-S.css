@@ -1,0 +1,141 @@
+.logobg {
+  height: 45px;
+  margin-left: 2.5%;
+  margin-top: 2.5%;
+}
+.logo {
+  height: 39px;
+  top: 9px;
+  left: 7px;
+}
+.houseImage {
+  height: 78px;
+  right: 12px;
+}
+.content h2 {
+  font-size: 15px;
+}
+.content p {
+  font-size: 0.7rem;
+}
+.para {
+  padding-right: 5px;
+}
+.coin1 {
+  top: 122px;
+  right: 79px;
+  height: 27px;
+}
+content a button {
+  color: white;
+  padding: 3px 14px;
+  border-radius: 18px;
+  background-color: blue;
+  margin-top: -21px;
+  font-size: 11px;
+  margin-left: 0px;
+}
+.coin1Logo {
+  position: absolute;
+  top: 123px;
+  right: 86px;
+  height: 24px;
+}
+.coin2 {
+  top: 94px;
+  right: 4px;
+  height: 22px;
+}
+.coin2Logo {
+  top: 95px;
+  right: 14px;
+  height: 17px;
+}
+.main::after {
+  top: 375px;
+  height: 29%;
+}
+.h3Tag {
+  font-size: 19px;
+}
+.balancer {
+  height: 14px !important;
+}
+.dharma {
+  height: 21px !important;
+  margin-left: 3px;
+}
+.zerion {
+  height: 17px !important;
+}
+.sushiswap {
+  height: 16px !important;
+  padding-left: 74px !important;
+  margin-left: 21px;
+}
+.partner {
+  padding: 4px 8px 0px 8px;
+}
+.zapper {
+  padding-left: 8px !important;
+  margin-left: 2px;
+}
+.company {
+  font-size: 21px !important;
+}
+.secondContainer {
+  height: 41vh;
+  margin-top: -45px;
+}
+#mew {
+  margin-top: 9px;
+  height: 15px;
+}
+.companyDiv {
+  padding: 3px 6px 0px 0px;
+  width: 80vw;
+  height: 38%;
+  margin: 1px 27px;
+}
+#zelcore {
+  height: 37px;
+}
+#more {
+  visibility: hidden;
+}
+.horse {
+  height: 31px !important;
+}
+.uniswap {
+  margin-left: -33px;
+  margin-top: 10px;
+}
+
+.heightwidth {
+  width: 56px;
+  height: 19px;
+}
+.smallimg {
+  width: 20px;
+}
+.div-col {
+  padding: 0px 4px;
+  margin: 13px 0px;
+}
+.secondContainer {
+  height: 34vh;
+  margin-top: -45px;
+}
+.cheems{
+  width: 27px;
+  height: 30px;
+}
+.trustwallet {
+  width: 73px;
+  height: 57px;
+  margin-top: -12px;
+}
+.ellipalimg{
+  margin-left: 108px;
+  margin-top: -39px;
+}

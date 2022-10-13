@@ -35,7 +35,7 @@ export default function Navbar(props) {
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown" style={{ width: 200 + 'px' }}>
                                     <table id="menuTable">
                                         <tr>
-                                            <td><a target="_blank" href="https://www.linkedin.com/company/lunch-money-token">About Us</a></td>
+                                            <td><a href="/about-us.html">About Us</a></td>
                                             <td></td>
                                             <td className="textabs"><img className="menuicons" src="/menuIcons/info.png" /></td>
                                         </tr>

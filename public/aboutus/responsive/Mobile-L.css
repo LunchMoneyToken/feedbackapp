@@ -1,0 +1,255 @@
+.logobg {
+  height: 55px;
+}
+
+.logo {
+  height: 43px;
+}
+.logobg {
+  margin-left: 12px;
+  margin-top: 7px;
+}
+
+.logo {
+  position: absolute;
+  top: 13px;
+  left: 16px;
+}
+
+.content {
+  padding: 23px 85px 0px 11px;
+}
+
+.content h2 {
+  font-size: 1.4rem;
+}
+
+.houseImage {
+  right: 0px;
+  height: 100px;
+}
+
+.companyDiv {
+  padding: 0px 2px 0px 0px;
+  width: 78vw;
+}
+.para {
+  font-size: 10px;
+  padding-right: 49px;
+}
+
+.coin2 {
+  position: absolute;
+  top: 80px;
+  right: 2px;
+  height: 25px;
+}
+
+.coin2Logo {
+  position: absolute;
+  top: 80px;
+  right: 11px;
+  height: 21px;
+}
+
+.coin1 {
+  position: absolute;
+  top: 113px;
+  right: 89px;
+  height: 41px;
+}
+.coin1Logo {
+  position: absolute;
+  top: 115px;
+  right: 101px;
+  height: 34px;
+}
+
+.content a button {
+  color: white;
+  padding: 3px 14px;
+  border-radius: 18px;
+  background-color: blue;
+  margin-top: -6px;
+  font-size: 16px;
+  margin-left: 3px;
+}
+
+.textcontent {
+  margin-left: 7px;
+  width: 85%;
+  height: 30%;
+}
+
+.h4tag {
+  font-size: 0.75rem !important;
+}
+
+.textBox {
+  width: 50%;
+}
+
+.main {
+  height: 74vh;
+}
+
+.main::after {
+  top: 407px;
+  height: 39%;
+}
+
+.h3Tag {
+  font-size: 23px;
+  font-weight: 700;
+  margin-top: 31%;
+}
+.partner img {
+  height: 26px;
+}
+
+.partners {
+  height: 52px;
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.partner {
+  padding: 2px 43px 0px 54px;
+  margin-top: 15px;
+}
+
+.secondContainer {
+  height: 47vh;
+}
+
+.company {
+  text-align: center;
+  /* font-size: 32px !important; */
+  font-weight: 700;
+}
+
+.companyDiv {
+  padding: 0px 9px 0px 0px;
+  width: 73vw;
+  height: 38%;
+  margin: 13px 3px 0px 47px;
+  align-items: center;
+  justify-content: center;
+}
+
+.companyimg {
+  height: 20px;
+}
+
+.companyimg2 {
+  height: 17px;
+}
+
+.companylogo {
+  height: 43px;
+  padding: 0px 5px;
+}
+
+#coibase {
+  height: 17px;
+}
+
+.companyimg1 {
+  height: 67px;
+  margin-top: -17px;
+  margin-left: -16px;
+}
+.balancer {
+  height: 18px !important;
+}
+.zerion {
+  height: 20px !important;
+}
+.dharma {
+  height: 20px !important;
+  padding-left: 0px;
+}
+.zapper {
+  height: 24px !important;
+}
+.foglory {
+  height: 20px !important;
+  padding-left: 7px;
+}
+.bancor {
+  height: 36px !important;
+}
+.uniswap {
+  height: 20px !important;
+}
+.sushiswap {
+  height: 20px !important;
+}
+.horse {
+  height: 36px !important;
+}
+.pad {
+  padding: 0px 10px !important;
+}
+.kyber {
+  height: 32px !important;
+  margin-top: 12px;
+  margin-left: -33px !important;
+}
+.company {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.content p {
+  color: white;
+  font-size: 0.9rem;
+}
+.btcAddress {
+  word-wrap: break-word;
+}
+#more {
+  display: none;
+}
+
+#mew {
+  height: 20px;
+  margin-top: 10px;
+}
+.ellipal {
+  margin-top: 2px;
+}
+.heightwidth {
+  width: 66px;
+  height: 28px;
+}
+.smallimg {
+  width: 31px;
+}
+.div-col {
+  padding: 0px 9px;
+  margin: 14px 0px;
+}
+.company-box {
+  margin: 10px 0px;
+}
+.cheems{
+  width: 37px;
+}
+.trustwallet{
+  width: 70px;
+  height: 60px;
+  margin-top: -13px;
+}
+.secondContainer {
+  height: 40vh;
+}
+
+.company {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+}

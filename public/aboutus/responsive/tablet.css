@@ -1,0 +1,156 @@
+.content {
+  padding: 23px 351px 0px 31px;
+}
+.content h2 {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.content a button {
+  color: white;
+  padding: 4px 25px;
+  border-radius: 18px;
+  background-color: blue;
+  margin-top: -3px;
+  font-size: 21px;
+  margin-left: -5px;
+  /* border: white; */
+}
+
+.logobg {
+  height: 75px;
+}
+.logo {
+  height: 65px;
+}
+
+.textcontent {
+  width: 80%;
+}
+
+.textBox {
+  height: 60%;
+}
+
+.h4tag {
+  font-size: 16px;
+}
+
+.main::after {
+  height: 50%;
+  width: 100%;
+}
+
+.houseImage {
+  right: 24px;
+  height: 198px;
+}
+
+.coin1 {
+  position: absolute;
+  top: 120px;
+  right: 197px;
+  height: 63px;
+}
+
+.coin1Logo {
+  position: absolute;
+  top: 125px;
+  right: 220px;
+  height: 47px;
+}
+
+.coin2 {
+  position: absolute;
+  top: 99px;
+  right: 21px;
+  height: 44px;
+}
+
+.coin2Logo {
+  position: absolute;
+  top: 103px;
+  right: 44px;
+  height: 33px;
+}
+
+.secondContainer {
+  height: 58vh;
+}
+
+.partner {
+  padding: 0px 105px 0px 88px;
+}
+.companyimg {
+  height: 30px;
+}
+
+.companylogo {
+  height: 50px;
+  padding: 10px;
+}
+
+.companyDiv {
+  padding: 0px 6px 0px 0px;
+  width: 88vw;
+}
+
+.h3Tag {
+  text-align: center;
+  margin-top: 28%;
+  font-size: 43px;
+}
+
+.company {
+  text-align: center;
+  font-size: 58px;
+  font-weight: 600;
+}
+.dharma {
+  margin-left: 28px;
+}
+.kyber {
+  margin-left: 108px !important;
+}
+#more {
+  height: 21px !important;
+}
+
+.heightwidth {
+  width: 110px;
+  height: 35px;
+}
+.smallimg {
+  width: 70px;
+}
+.company-box {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 159px;
+  margin-left: 117px;
+  margin-top: -18px;
+  margin: 10px 28px;
+}
+
+.cheems{
+  width: 30px;
+}
+.trustwallet{
+  width: 114px;
+  height: 77px;
+  margin-top: -18px;
+}
+.dilmore{
+  display: none;
+}
+
+.company {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 600;
+}
+.secondContainer {
+  height: 51vh;
+  width: 99vw;
+  position: relative;
+}

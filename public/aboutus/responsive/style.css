@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body{
+  overflow-x: hidden;
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+  border: 1px solid black;
+  position: relative;
+}
+
+.main::before {
+  content: "";
+  background: url("/aboutus/imgs/background.png");
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.main::after {
+  content: "";
+  background: url("/aboutus/imgs/Planets.png") no-repeat center/cover;
+  z-index: 1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 506px;
+}
+
+.logobg {
+  height: 81px;
+  margin-left: 2%;
+  margin-top: 1.5%;
+}
+.logo {
+  height: 70px;
+  position: absolute;
+  top: 10;
+  top: 10px;
+  left: 21px;
+}
+
+.content {
+  padding: 23px 813px 0px 31px;
+}
+
+.content h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: white;
+}
+.content p {
+  color: white;
+  font-size: 1.4rem;
+}
+
+.content a button {
+  color: white;
+  padding: 4px 25px;
+  border-radius: 18px;
+  background-color: blue;
+  margin-top: 20px;
+  font-size: x-large;
+  border: white;
+  font-weight: 600;
+}
+.content a button:hover{
+  color: white !important;
+}
+
+.houseImage {
+  position: absolute;
+  top: 123px;
+  right: 62px;
+  height: 400px;
+}
+.coin1 {
+  position: absolute;
+  top: 112px;
+  right: 244px;
+  height: 74px;
+}
+.coin1Logo {
+  position: absolute;
+  top: 122px;
+  right: 266px;
+  height: 51px;
+}
+.coin2 {
+  position: absolute;
+  top: 81px;
+  right: 56px;
+  height: 48px;
+}
+.coin2Logo {
+  position: absolute;
+  top: 83px;
+  right: 75px;
+  height: 37px;
+}
+
+.textcontent {
+  height: 60%;
+  width: 59%;
+  /* border: 2px solid violet; */
+  margin-top: 16px;
+  display: flex;
+  z-index: 2000 !important;
+  margin-left: 27px;
+}
+
+.textBox {
+  z-index: 2000 !important;
+  height: 88%;
+  width: 45%;
+  margin: 7px;
+}
+.textBox h4 {
+  color: white;
+  margin-top: 8px;
+  font-weight: 100;
+  font-size: 1.3rem;
+  font-family: "Roboto MONO";
+}
+
+/* Second Container */
+
+.secondContainer {
+  height: 51vh;
+  width: 99vw;
+  position: relative;
+}
+
+.h3Tag {
+  text-align: center;
+  margin-top: 33%;
+  font-size: 47px;
+}
+.partner {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px 412px;
+}
+
+.partners {
+  height: 65px;
+  padding: 20px;
+}
+
+.partner img {
+  height: 30px;
+}
+
+/* Company Container */
+
+.companyContainer {
+  height: 60vh;
+  width: 100%;
+  /* border: 1px solid red; */
+}
+
+.company {
+  text-align: center;
+font-size: 47px;
+}
+
+.companyDiv {
+  display: flex;
+  height: 20vh;
+  width: 89vw;
+  flex-wrap: wrap;
+  margin-left: 94px;
+  padding: 0px 304px;
+  margin-top: 20px;
+}
+
+.companylogo {
+  height: 50px;
+  padding: 12px;
+}
+
+.companyimg {
+  height: 29px;
+}
+.companyimg1 {
+  height: 70px;
+  margin-top: -18px;
+}
+#more {
+  height: 17px;
+}
+.kyber {
+  height: 37px !important;
+}
+.tokenPocket {
+  height: 33px !important;
+}
+#mew {
+  height: 23px;
+}
+#zelcore {
+  height: 43px;
+  margin-top: -5px;
+}
+.company-box {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 159px;
+  margin-left: 178px;
+  margin-top: 14px;
+}
+
+.heightwidth {
+  width: 150px;
+  height: 50px;
+}
+.div-col {
+  padding: 0px 12px;
+  margin: 16px 0px;
+}
+.smallimg {
+  width: 83px;
+}
+.cheems{
+  width: 40px;
+
+}
+.dilmore{
+  width: 60px;
+}
+
+.trustwallet{
+  width: 134px;
+  height: 81px;
+  margin-top: -13px;
+}
