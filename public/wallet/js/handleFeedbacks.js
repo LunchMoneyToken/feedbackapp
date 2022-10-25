@@ -1,4 +1,3 @@
-let feedBackData = {}
 let db;
 
 // Firebase configuration
@@ -28,7 +27,6 @@ async function fetchFeedbacks(walletAddress) {
     for (const doc of allFeedbacks.docs) {
         data = doc.data()
         // Populate the div
-        console.log(data)
         if (data['attendDate'] !== undefined) {
             $('#feedbackDiv').append(`
                 <tr>
