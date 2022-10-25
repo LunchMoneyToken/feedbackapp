@@ -4,24 +4,25 @@ let db, userBalance;
 let eligible = false
 
 // Firebase configuration
-// const firebaseConfig = {
-//     apiKey: "AIzaSyDLDvv4up4sqgqY56ywCYmJ0z5A6raTacc",
-//     authDomain: "feedback-59934.firebaseapp.com",
-//     projectId: "feedback-59934",
-//     storageBucket: "feedback-59934.appspot.com",
-//     messagingSenderId: "593711442758",
-//     appId: "1:593711442758:web:ce3b84e9bbf64ba9ef1347"
-// };
+const firebaseConfig = {
+    apiKey: "AIzaSyDLDvv4up4sqgqY56ywCYmJ0z5A6raTacc",
+    authDomain: "feedback-59934.firebaseapp.com",
+    projectId: "feedback-59934",
+    storageBucket: "feedback-59934.appspot.com",
+    messagingSenderId: "593711442758",
+    appId: "1:593711442758:web:ce3b84e9bbf64ba9ef1347"
+};
 
 // Clients
-const firebaseConfig = {
-    apiKey: "AIzaSyBOnpimk6YIKsIUcvccH72qZQS4W1eNmtM",
-    authDomain: "feedback-5e5de.firebaseapp.com",
-    projectId: "feedback-5e5de",
-    storageBucket: "feedback-5e5de.appspot.com",
-    messagingSenderId: "880572061052",
-    appId: "1:880572061052:web:e76a69f6c040fab2f540f9"
-};
+// Need
+// const firebaseConfig = {
+//     apiKey: "AIzaSyBOnpimk6YIKsIUcvccH72qZQS4W1eNmtM",
+//     authDomain: "feedback-5e5de.firebaseapp.com",
+//     projectId: "feedback-5e5de",
+//     storageBucket: "feedback-5e5de.appspot.com",
+//     messagingSenderId: "880572061052",
+//     appId: "1:880572061052:web:e76a69f6c040fab2f540f9"
+// };
 
 function uuid(mask = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx') {
     return `${mask}`.replace(/[xy]/g, function (c) {

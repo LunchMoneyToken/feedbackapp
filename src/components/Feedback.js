@@ -13,8 +13,8 @@ export default function Feedback(props) {
             <h1>Submit Your Feedback</h1>
             <h6>(1 feedback/day allowed)</h6>
             <br/>
-            <select id="restroName" className="form-select" defaultValue="KFC">
-                <option value="KFC">KFC</option>
+            <select id="restroName" className="form-select">
+                <option selected value="KFC">KFC</option>
                 <option value="McDonald's">McDonald's</option>
                 <option value="Burger King">Burger King</option>
                 <option value="Wendy's">Wendy's</option>

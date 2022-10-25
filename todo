@@ -4,17 +4,6 @@ Icantmakethisstuffup!
 adrian@lunchmoney.io
 (Test@123)
 
-Claim Rewards Work:
-
-1) Add a menu to show the balance wiht a button names as *Withdraw*
-    On clicking *Withdraw button* 
-    *Show progress bar*
-    -> run the _HASH_ func
-    -> cut the 10$ from firebase
-    -> run the _getCode_ func
-    -> sendMail to the client
-    *hide progress bar and alert client that _Withdraw Successful_*
-
-2) Claim Reward:
-    -> Fetch the input code
-    -> run the getReward func
+TODO:
+    - Setup Send and Receive LMY
+    - Email System should be changed

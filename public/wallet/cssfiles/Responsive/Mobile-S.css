@@ -1,0 +1,50 @@
+.main {
+  height: 162vh;
+}
+.box1 p {
+  font-size: 18px;
+  padding-top: 7px;
+}
+.btn1 {
+  padding: 2px 12px;
+}
+.btn2 {
+  padding: 2px 3px;
+}
+.btnfont {
+  font-size: 15px !important;
+}
+.nav-container img {
+  height: 50px !important;
+}
+.floatWallet1 {
+  top: 34px;
+  left: 119px;
+}
+
+.svgIcon {
+  display: none;
+}
+.box3 {
+  padding: 8px 5px 0px 60px;
+}
+.feedbackList {
+  height: 308px;
+  width: 280px;
+}
+.box1 h3 {
+  font-size: 12px;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.floatWallet1 {
+  top: 25px;
+  left: 127px;
+}
+.floatWallet2 {
+  /* top: 36px;
+  left: 124px; */
+}

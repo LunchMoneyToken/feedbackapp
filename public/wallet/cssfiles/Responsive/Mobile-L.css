@@ -1,0 +1,101 @@
+.nav-container {
+  margin-left: 16px;
+  margin-top: 12px;
+}
+.nav-container img {
+  height: 65px !important;
+}
+.box1 h3 {
+  font-size: 15px;
+}
+.box1 p {
+  font-size: 24px;
+  padding-top: 2px;
+}
+.box3 {
+  height: 91px;
+  width: 463px;
+  padding: 8px 5px 0px 47px;
+}
+.btn1 {
+  padding: 3px 27px;
+  margin-bottom: 3px;
+}
+.main {
+  height: 171vh;
+}
+.boxContainer {
+  height: 969px;
+}
+.graphContainer {
+  height: 440px;
+}
+.currentStatus {
+  width: 362px;
+  height: 217px;
+}
+.journeyBg {
+  position: absolute;
+  top: 40px;
+  height: 144px;
+  left: 110px;
+}
+.journey {
+  left: 113px;
+  position: absolute;
+  top: 38px;
+  height: 138px;
+  left: 113px;
+}
+
+.feedbackList {
+  height: 326px;
+  width: -webkit-fill-available !important;
+}
+.spantxt {
+  font-size: 10px;
+  word-break: break-word;
+}
+.smallpics {
+  font-size: 10px;
+}
+.floatWallet1 {
+  position: absolute;
+  top: 43px;
+  left: 160px;
+  font-size: 10px !important;
+  color: #23ff23;
+}
+.floatWallet2 {
+  position: absolute;
+  /* top: 55px;
+  left: 157px; */
+  font-size: 9px !important;
+  color: #9ba99b;
+}
+.journeyman {
+  position: absolute;
+  top: 181px;
+  left: 91px;
+  font-size: 32px !important;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600 !important;
+}
+.displayProp {
+  visibility: visible;
+}
+
+.floatWallet1 {
+  position: absolute;
+  top: 31px;
+  left: 166px;
+  font-size: 10px !important;
+  color: #23ff23;
+}
+.floatWallet2 {
+  position: absolute;
+  /* top: 46px;
+  left: 162px; */
+  font-size: 9px !important;
+  color: #9ba99b;
+}

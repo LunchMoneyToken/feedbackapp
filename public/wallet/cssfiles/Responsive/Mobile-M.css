@@ -1,0 +1,62 @@
+.box1 h3 {
+  font-size: 13px;
+}
+.box1 p {
+  font-size: 23px;
+  padding-top: 4px;
+}
+.btn1 {
+  padding: 3px 14px;
+}
+.btn2 {
+  padding: 3px 6px;
+}
+.graphContainer {
+  height: 425px;
+}
+.tableedit {
+  width: auto !important;
+  font-size: small !important;
+}
+.main {
+  height: 163vh;
+}
+.feedbackList {
+  height: 283px;
+  width: 331px;
+}
+.floatWallet1 {
+  position: absolute;
+  top: 29px;
+  left: 158px;
+  font-size: 9px !important;
+  color: #23ff23;
+}
+.floatWallet2 {
+  position: absolute;
+  /* top: 41px;
+  left: 154px; */
+  font-size: 10px !important;
+  color: #9ba99b;
+}
+.journeyBg {
+  top: 35px;
+  height: 127px;
+  left: 93px;
+}
+.journey {
+  top: 32px;
+  height: 123px;
+  left: 95px;
+}
+.journeyman {
+  top: 172px;
+  left: 70px;
+  font-size: 29px !important;
+}
+.currentStatus {
+  height: 219px;
+}
+.nav-container img {
+  height: 58px !important;
+}
