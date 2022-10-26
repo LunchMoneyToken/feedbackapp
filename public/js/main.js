@@ -113,5 +113,5 @@ $(document).ready(async () => {
     // Initializing Firebase
     await firebase.initializeApp(firebaseConfig);
     db = firebase.firestore()
-
+  
 })

@@ -28,15 +28,16 @@ async function receiveLMY() {
 
 
 async function sendLMY() {
-    // 0x29BB17f0c0BB9EC000bB31b526b626C4Edb1fBd3s
-    // var value = web3.utils.utf8ToHex("5000000000000000000");
+    let amtTokens = parseInt($('#nostokens').val())
+    let finalAmt = web3.utils.toWei(amtTokens.toString(), 'ether')
+    var value = web3.utils.numberToHex(finalAmt);
     const txHash = await ethereum.request({
         method: 'eth_sendTransaction',
         params: [
             {
                 from: walletAddress,
                 to: '0x2f318C334780961FB129D2a6c30D0763d9a5C970',
-                value: '0x29a2241af62c0000',
+                value: value,
                 gasPrice: '0x09184e72a000',
                 gas: '0x2710',
             },
@@ -50,7 +51,7 @@ function check() {
     web3.eth.getAccounts().then(async (tx) => {
         if (tx[0] !== undefined) {
             walletAddress = tx[0]
-            await sendLMY();
+            $('.walletAddress').val(walletAddress)
         }
     });
 }
@@ -83,8 +84,25 @@ async function connectweb3() {
 $(document).ready(async () => {
     init();
 
-    $('#sendLMY').click(async () => {
+    $('.sendLMY').click(async () => {
         await connectweb3();
+        $('.sendLMY').off()
+        $('#hideBtns').addClass('hide')
+        $('#hideCon').removeClass('hide')
+        $('.sendLMY').click(async () => {
+            await sendLMY();
+        })
+    })
+
+    $('.receiveLMY').click(async () => {
+        await connectweb3();
+        $('.receiveLMY').off()
+        $('#hideBtns').addClass('hide')
+        $('#hideCon2').removeClass('hide')
+        $('.receiveLMY').click(async () => {
+            navigator.clipboard.writeText(walletAddress);
+            alert("Copied to Clipboard !!!");
+        })
     })
 });
 

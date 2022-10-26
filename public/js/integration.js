@@ -115,6 +115,11 @@ function check() {
         if (tx[0] !== undefined) {
             walletAddress = tx[0]
 
+            $('#walletOpenBtn').show()
+            $('#walletOpenBtn').click(() => {
+                location.href = '/wallet.html?address='+walletAddress
+            })
+
             web3.eth.net.getId().then(async (netId) => {
                 if (netId === chainId) {
 

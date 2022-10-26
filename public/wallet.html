@@ -16,7 +16,6 @@
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
-  <!-- <link rel="stylesheet" href="style.css" /> -->
 
   <link rel="stylesheet" href="wallet/cssfiles/style.css" />
   <link rel="stylesheet" media="(max-width:769px) " href="wallet/cssfiles/Responsive/tablet.css" />
@@ -25,6 +24,11 @@
   <link rel="stylesheet" media="(max-width:321px) " href="wallet/cssfiles/Responsive/Mobile-S.css" />
 
   <script src="https://widgets.coingecko.com/coingecko-coin-price-chart-widget.js"></script>
+  <style>
+    .hide{
+      display: none ;
+    }
+  </style>
 </head>
 
 <body>
@@ -47,36 +51,55 @@
           </div>
           <div class="col-6 col-md-4 h-25 btnBox">
             <div class="btnDiv">
-              <button class="btn1">
-                <a id="sendLMY" class="cr"><svg class="svgIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                    style="
+              <div id="hideCon" class="form-group row hide">
+                <div class="col-8">
+                  <input id="nostokens" type="number" placeholder="No. of LMY tokens" class="form-control">
+                </div>
+                <div class="col-3">
+                  <button class="sendLMY btn btn-primary">Send</button>
+                </div>
+                <br />
+              </div>
+              <div id="hideCon2" class="form-group row hide">
+                <div class="col-8">
+                  <input class="walletAddress form-control">
+                </div>
+                <div class="col-3">
+                  <button class="receiveLMY btn btn-primary">Copy</button>
+                </div>
+                <br />
+              </div>
+              <div id="hideBtns">
+                <button class="btn1">
+                  <a class="cr sendLMY"><svg class="svgIcon" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512" style="
                         height: 26px;
                         margin-right: 8px;
                         margin-left: -7px;
                         margin-top: -10px;
                         fill: white;
                       ">
-                    <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-                    <path
-                      d="M501.6 4.186c-7.594-5.156-17.41-5.594-25.44-1.063L12.12 267.1C4.184 271.7-.5037 280.3 .0431 289.4c.5469 9.125 6.234 17.16 14.66 20.69l153.3 64.38v113.5c0 8.781 4.797 16.84 12.5 21.06C184.1 511 188 512 191.1 512c4.516 0 9.038-1.281 12.99-3.812l111.2-71.46l98.56 41.4c2.984 1.25 6.141 1.875 9.297 1.875c4.078 0 8.141-1.031 11.78-3.094c6.453-3.625 10.88-10.06 11.95-17.38l64-432C513.1 18.44 509.1 9.373 501.6 4.186zM369.3 119.2l-187.1 208.9L78.23 284.7L369.3 119.2zM215.1 444v-49.36l46.45 19.51L215.1 444zM404.8 421.9l-176.6-74.19l224.6-249.5L404.8 421.9z" />
-                  </svg>
-                  <span class="btnfont" style="font-size: 21px">Send LMY</span></a>
-              </button>
-              <button class="btn2">
-                <a id="receiveLMY" class="cr"><svg class="svgIcon" xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512" style="
+
+                      <path
+                        d="M501.6 4.186c-7.594-5.156-17.41-5.594-25.44-1.063L12.12 267.1C4.184 271.7-.5037 280.3 .0431 289.4c.5469 9.125 6.234 17.16 14.66 20.69l153.3 64.38v113.5c0 8.781 4.797 16.84 12.5 21.06C184.1 511 188 512 191.1 512c4.516 0 9.038-1.281 12.99-3.812l111.2-71.46l98.56 41.4c2.984 1.25 6.141 1.875 9.297 1.875c4.078 0 8.141-1.031 11.78-3.094c6.453-3.625 10.88-10.06 11.95-17.38l64-432C513.1 18.44 509.1 9.373 501.6 4.186zM369.3 119.2l-187.1 208.9L78.23 284.7L369.3 119.2zM215.1 444v-49.36l46.45 19.51L215.1 444zM404.8 421.9l-176.6-74.19l224.6-249.5L404.8 421.9z" />
+                    </svg>
+                    <span class="btnfont" style="font-size: 21px">Send LMY</span></a>
+                </button>
+                <button class="btn2">
+                  <a class="receiveLMY cr"><svg class="svgIcon" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512" style="
                         height: 26px;
                         margin-right: 8px;
                         margin-left: -7px;
                         margin-top: -10px;
                         fill: white;
                       ">
-                    <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-                    <path
-                      d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zM432 456c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z" />
-                  </svg>
-                  <span class="btnfont" style="font-size: 21px">Receive LMY</span></a>
-              </button>
+                      <path
+                        d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zM432 456c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z" />
+                    </svg>
+                    <span class="btnfont" style="font-size: 21px">Receive LMY</span></a>
+                </button>
+              </div>
             </div>
           </div>
         </div>
