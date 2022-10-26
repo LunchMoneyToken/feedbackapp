@@ -52,6 +52,11 @@ function check() {
         if (tx[0] !== undefined) {
             walletAddress = tx[0]
             $('.walletAddress').val(walletAddress)
+            $('#hideConnect').addClass('hide')
+            $('#hideBtns').removeClass('hide')
+            
+            fetchUserBal(walletAddress)
+            await fetchFeedbacks(walletAddress)
         }
     });
 }
@@ -84,8 +89,11 @@ async function connectweb3() {
 $(document).ready(async () => {
     init();
 
-    $('.sendLMY').click(async () => {
+    $('#connectBTN').click(async () => {
         await connectweb3();
+    });
+
+    $('.sendLMY').click(async () => {
         $('.sendLMY').off()
         $('#hideBtns').addClass('hide')
         $('#hideCon').removeClass('hide')
@@ -95,7 +103,6 @@ $(document).ready(async () => {
     })
 
     $('.receiveLMY').click(async () => {
-        await connectweb3();
         $('.receiveLMY').off()
         $('#hideBtns').addClass('hide')
         $('#hideCon2').removeClass('hide')

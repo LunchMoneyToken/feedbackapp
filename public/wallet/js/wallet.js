@@ -33,10 +33,4 @@ function fetchUserBal(address) {
         }
     });
 }
-
-$(document).ready(() => {
-    walletAddress = location.search.split('=')[1]
-    fetchUserBal(walletAddress)
-})
-
 // fetchUserBal("0x6f1aF2Eeab8BA073D674dbD1D6d2f82996504133")
