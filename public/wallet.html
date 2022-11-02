@@ -25,8 +25,8 @@
 
   <script src="https://widgets.coingecko.com/coingecko-coin-price-chart-widget.js"></script>
   <style>
-    .hide{
-      display: none ;
+    .hide {
+      display: none;
     }
   </style>
 </head>
@@ -58,11 +58,19 @@
         </div>
         <div class="currentStatus">
           <h4>Current Status</h4>
+          <div class="mx-auto text-center">
+            <img id="currentStatus" src="" alt="" class="text-center mx-auto" />
+            <div style="margin-top: 10px; margin-bottom: 10px">
+              <h4 id="currentTitle"></h4>
+            </div>
+          </div>
+
+          <!-- <h4>Current Status</h4>
           <div>
             <img src="wallet/img/journeymanbg.png" alt="" class="journeyBg" />
           </div>
-          <div><img src="wallet/img/journeyman.png" alt="" class="journey" /></div>
-          <h4 class="journeyman">Journeyman</h4>
+          <div><img src="wallet/img/apprentice.png" alt="" class="journey" /></div>
+          <h4 class="journeyman">Journeyman</h4> -->
         </div>
         <div class="feedbackList">
           <h3>Feedback List</h3>
@@ -97,14 +105,8 @@
   <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
 
-
-  <script src="https://unpkg.com/web3@latest/dist/web3.min.js"></script>
-  <script src="https://unpkg.com/web3modal"></script>
-  <script src="https://unpkg.com/@walletconnect/web3-provider"></script>
-
   <script src="wallet/js/wallet.js"></script>
   <script src="wallet/js/handleFeedbacks.js"></script>
-  <script src="wallet/js/handleWallet.js"></script>
 </body>
 
 </html>

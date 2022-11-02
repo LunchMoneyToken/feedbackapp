@@ -1,5 +1,7 @@
 .main {
-  height: 162vh;
+  height: auto;
+  padding-bottom: 30px;
+  /* height: 162vh; */
 }
 .box1 p {
   font-size: 18px;

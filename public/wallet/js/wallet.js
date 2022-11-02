@@ -14,7 +14,7 @@ function convertToETH(userBalance) {
     });
 }
 
-function fetchUserBal(address) {
+function fetchUserTokens(address) {
     $.ajax({
         url: 'https://deep-index.moralis.io/api/v2/' + address + '/erc20?chain=eth',
         method: 'GET',

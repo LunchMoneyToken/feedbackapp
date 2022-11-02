@@ -5,6 +5,7 @@
 .logo {
   height: 43px;
 }
+
 .logobg {
   margin-left: 12px;
   margin-top: 7px;
@@ -33,6 +34,7 @@
   padding: 0px 2px 0px 0px;
   width: 78vw;
 }
+
 .para {
   font-size: 10px;
   padding-right: 49px;
@@ -58,6 +60,7 @@
   right: 89px;
   height: 41px;
 }
+
 .coin1Logo {
   position: absolute;
   top: 115px;
@@ -90,7 +93,9 @@
 }
 
 .main {
-  height: 74vh;
+  /* height: 74vh; */
+  height: auto;
+  padding-bottom: 30px;
 }
 
 .main::after {
@@ -103,6 +108,7 @@
   font-weight: 700;
   margin-top: 31%;
 }
+
 .partner img {
   height: 26px;
 }
@@ -161,43 +167,55 @@
   margin-top: -17px;
   margin-left: -16px;
 }
+
 .balancer {
   height: 18px !important;
 }
+
 .zerion {
   height: 20px !important;
 }
+
 .dharma {
   height: 20px !important;
   padding-left: 0px;
 }
+
 .zapper {
   height: 24px !important;
 }
+
 .foglory {
   height: 20px !important;
   padding-left: 7px;
 }
+
 .bancor {
   height: 36px !important;
 }
+
 .uniswap {
   height: 20px !important;
 }
+
 .sushiswap {
   height: 20px !important;
 }
+
 .horse {
   height: 36px !important;
 }
+
 .pad {
   padding: 0px 10px !important;
 }
+
 .kyber {
   height: 32px !important;
   margin-top: 12px;
   margin-left: -33px !important;
 }
+
 .company {
   text-align: center;
   font-size: 1.8rem;
@@ -208,9 +226,11 @@
   color: white;
   font-size: 0.9rem;
 }
+
 .btcAddress {
   word-wrap: break-word;
 }
+
 #more {
   display: none;
 }
@@ -219,31 +239,39 @@
   height: 20px;
   margin-top: 10px;
 }
+
 .ellipal {
   margin-top: 2px;
 }
+
 .heightwidth {
   width: 66px;
   height: 28px;
 }
+
 .smallimg {
   width: 31px;
 }
+
 .div-col {
   padding: 0px 9px;
   margin: 14px 0px;
 }
+
 .company-box {
   margin: 10px 0px;
 }
-.cheems{
+
+.cheems {
   width: 37px;
 }
-.trustwallet{
+
+.trustwallet {
   width: 70px;
   height: 60px;
   margin-top: -13px;
 }
+
 .secondContainer {
   height: 40vh;
 }

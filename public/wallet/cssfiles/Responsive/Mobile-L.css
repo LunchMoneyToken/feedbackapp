@@ -22,7 +22,9 @@
   margin-bottom: 3px;
 }
 .main {
-  height: 171vh;
+  height: auto;
+  padding-bottom: 30px;
+  /* height: 171vh; */
 }
 .boxContainer {
   height: 969px;
@@ -32,7 +34,7 @@
 }
 .currentStatus {
   width: 362px;
-  height: 217px;
+  height: auto;
 }
 .journeyBg {
   position: absolute;
@@ -45,7 +47,8 @@
   position: absolute;
   top: 38px;
   height: 138px;
-  left: 113px;
+  width: 250px;
+  left: 60px;
 }
 
 .feedbackList {

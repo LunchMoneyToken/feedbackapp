@@ -10,16 +10,20 @@
 }
 
 .main {
-  height: 169vh;
+  height: auto;
+  padding-bottom: 15%;
+  margin-bottom: 10%;
   width: 84vw;
   /* border: 2px solid black; */
   margin: 8px auto;
   background-color: #f0f1f1;
   border-radius: 10px;
 }
+
 .box1 {
   position: relative;
 }
+
 .textContent {
   height: 90px;
   width: auto;
@@ -35,11 +39,13 @@
   font-weight: 800;
   margin-top: -17px;
 }
+
 .box1 h3 {
   font-size: 20px;
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 600;
 }
+
 .box2 {
   height: 85px;
   width: 190px;
@@ -48,6 +54,7 @@
   box-sizing: border-box;
   padding: 24px 10px;
 }
+
 .box3 {
   height: 85px;
   width: 881px;
@@ -65,6 +72,7 @@
   display: flex;
   flex-wrap: wrap;
 }
+
 .graphContainer {
   height: 437px;
   width: 100%;
@@ -81,19 +89,21 @@
   border-radius: 9px;
   background-color: #180c56;
 }
+
 .btn2 {
   /* margin: 0px 69px; */
   padding: 3px 18px;
   border-radius: 9px;
   background-color: #14f4bd;
 }
+
 .box3 button a {
   text-decoration: none;
   color: white;
 }
 
 .currentStatus {
-  height: 243px;
+  height: auto;
   width: 499px;
   /* border: 1px solid red; */
   margin: 14px 7px;
@@ -102,24 +112,35 @@
   padding: 10px;
   border-radius: 10px;
 }
+
 .currentStatus h4 {
   /* margin-left: 11px; */
   font-size: 21px;
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 600;
 }
+
 .journeyBg {
   position: absolute;
   top: 43px;
   height: 157px;
   left: 140px;
 }
+
+#currentStatus {
+  max-width: 30%;
+  height: auto;
+  display: block;
+}
+
 .journey {
   position: absolute;
   top: 41px;
   height: 151px;
-  left: 144px;
+  width: 250px;
+  left: 99px;
 }
+
 .feedbackList {
   height: 243px;
   width: 749px;
@@ -129,12 +150,14 @@
   padding: 10px;
   border-radius: 10px;
 }
+
 .feedbackList h3 {
   /* margin-left: 11px; */
   font-size: 21px;
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 600;
 }
+
 .journeyman {
   position: absolute;
   top: 202px;
@@ -151,6 +174,7 @@
   font-size: 15px !important;
   color: #23ff23;
 }
+
 .floatWallet2 {
   position: absolute;
   /* top: 75px; */
@@ -158,20 +182,25 @@
   font-size: 14px !important;
   color: #9ba99b;
 }
+
 .row {
   align-items: center;
 }
-.btnDiv .btn1 a{
+
+.btnDiv .btn1 a {
   text-decoration: none;
   color: white;
 }
-.btnDiv .btn2 a{
+
+.btnDiv .btn2 a {
   text-decoration: none;
   color: white;
 }
-.feedbackList > .table-responsive{
+
+.feedbackList>.table-responsive {
   height: 200px;
 }
-.cr{
+
+.cr {
   cursor: pointer;
 }
