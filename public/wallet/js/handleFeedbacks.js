@@ -35,4 +35,9 @@ $(document).ready(async () => {
     await firebase.initializeApp(firebaseConfig);
     db = firebase.firestore()
 
+    walletAddress = location.search.split('=')[1]
+    if (walletAddress != '') {
+        fetchUserBal(walletAddress)
+        await fetchFeedbacks(walletAddress)
+    }
 })

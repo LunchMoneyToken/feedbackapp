@@ -69,8 +69,8 @@ export default function Navbar(props) {
                                             <td></td>
                                             <td className="textabs"><img className="menuicons" src="/menuIcons/form.png" /></td>
                                         </tr>
-                                        <tr>
-                                            <td><a href='/wallet.html'>LMY Extension Wallet</a></td>
+                                        <tr id='walletextensionCon' className='hide'>
+                                            <td id="walletextension" className='cr'><a >LMY Extension Wallet</a></td>
                                             <td></td>
                                             <td className="textabs"><img className="menuicons" src="/menuIcons/coin.png" /></td>
                                         </tr>

@@ -118,6 +118,13 @@ function check() {
             web3.eth.net.getId().then(async (netId) => {
                 if (netId === chainId) {
 
+                    // show the lmy extension wallets
+                    $('#walletextensionCon').show()
+
+                    $('#walletextension').click(() => {
+                        location.href = '/wallet.html?address='+walletAddress;
+                    })
+
                     await beginWorks()
 
                 } else {
