@@ -1,0 +1,54 @@
+h3 {
+    font-size: 57px;
+    text-align: end;
+}
+
+h4 {
+    font-size: 24px;
+    text-align: inherit;
+}
+
+.leaderBoardSpan {
+    font-size: 14px;
+}
+
+/* .btcAddress {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis !important;
+    display: flex;
+} */
+
+
+h1 {
+    font-size: 26px;
+    font-weight: bold;
+}
+.imgHeight {
+    height: 19px;
+}
+
+.spanSize {
+    font-size: x-small;
+}
+
+.appSmallImg {
+    display: none;
+}
+
+.svgTag {
+    height: 13px;
+}
+
+.imgboard {
+    height: 21px;
+}
+
+.numberColumn {
+    padding: 0px 2px 3px 5px;
+}
+
+.lmy {
+    font-size: 21px !important;
+    font-weight: 500;
+}

@@ -5,5 +5,8 @@ adrian@lunchmoney.io
 (Test@123)
 
 TODO:
-    - Setup Send and Receive LMY
-    - Email System should be changed
+    - Stake & Unstake Function
+    - Fetch all token holder
+    - Sort them 
+    - Filter out 100 Of Them
+    - Put the top 3 on the top and fill the rest

@@ -1,5 +1,5 @@
 let APIKEY = 'LBdTmlr3x5t1TPsMDgaf6lGZdbQ3lgwvNnrEj0B1mBC0nydoALOJFkspR3eCcO4J'
-let userBalance, walletAddress
+let userBalance, walletAddress, web3;
 
 function setText(src, txt) {
     $('#currentStatus').attr('src', src)
@@ -34,10 +34,8 @@ function convertToETH(userBalance) {
         method: 'GET',
         headers: { 'accept': 'application/json', 'X-API-Key': APIKEY },
         success: (data) => {
-            let ethValinWei = data['nativePrice']['value']
-            let ethVal = ethValinWei / 1000000000000000000
-            setUserStatus(ethVal)
-            $('#ethBalance').html('= ' + userBalance * ethVal + ' ETH')
+            let oneLMYinETH = web3.utils.fromWei(data['nativePrice']['value'], 'ether')
+            $('#ethBalance').html('= ' + userBalance * oneLMYinETH + ' ETH')
         }
     });
 }
@@ -55,6 +53,7 @@ function fetchUserTokens(address) {
                     }
                 }
                 $('#userBalance').html(userBalance.toFixed(2) + ' LMY')
+                setUserStatus(userBalance)
                 convertToETH(userBalance)
             } else {
                 setUserStatus(0)
@@ -64,3 +63,21 @@ function fetchUserTokens(address) {
     });
 }
 // fetchUserBal("0x6f1aF2Eeab8BA073D674dbD1D6d2f82996504133")
+$(document).ready(() => {
+    web3 = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/v3/c0db0b85222f4f5c82dd2bed1fc843f9"));
+})
+Number.prototype.toFixedSpecial = function (n) {
+    var str = this.toFixed(n);
+    if (str.indexOf("e+") === -1) return str;
+
+    str = str
+        .replace(".", "")
+        .split("e+")
+        .reduce(function (p, b) {
+            return p + Array(b - p.length + 2).join(0);
+        });
+
+    if (n > 0) str += "." + Array(n + 1).join(0);
+
+    return str;
+};

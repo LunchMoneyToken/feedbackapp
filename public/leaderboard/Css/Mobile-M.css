@@ -1,0 +1,38 @@
+h4 {
+    font-size: large;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+.imgHeight {
+    height: 23px;
+}
+
+.spanSize {
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.stake {
+    font-size: larger;
+}
+
+.lmy {
+    font-size: 23px;
+}
+
+.imgboard {
+    height: 24px;
+}
+
+.leaderBoardSpan {
+    font-size: 13px;
+}
+.numberColumn{
+    padding: 0px 2px 3px 0px;
+}
+.svgTag{
+    height: 15px;
+}

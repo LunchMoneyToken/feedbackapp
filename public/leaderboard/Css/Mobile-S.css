@@ -1,0 +1,49 @@
+h3 {
+    font-size: -webkit-xxx-large;
+}
+
+.appSmallImg {
+    height: 23px;
+}
+
+#btnmargin {
+    margin: 4px 11px;
+}
+
+h1 {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.imgHeight {
+    height: 15px;
+}
+
+.spanSize {
+    font-size: 6px;
+    font-weight: 700;
+}
+
+.imgboard {
+    height: 17px;
+}
+
+.leaderBoardSpan {
+    font-size: 10px;
+}
+
+.svgTag {
+    height: 11px;
+}
+
+.lmy {
+    font-size: 18px !important;
+}
+
+h4 {
+    text-align: end;
+}
+
+#footerFont {
+    font-size: small;
+}
