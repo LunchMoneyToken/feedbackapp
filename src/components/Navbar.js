@@ -55,6 +55,11 @@ export default function Navbar(props) {
                                             <td className="textabs"><img className="menuicons" src="/menuIcons/question.png" /></td>
                                         </tr>
                                         <tr>
+                                            <td><a target="_blank" href="/leaderboard.html">Leaderboard</a></td>
+                                            <td></td>
+                                            <td className="textabs"><i style={{color: 'white', fontSize: 1.5+'rem'}} class="fas fa-award"></i></td>
+                                        </tr>
+                                        <tr>
                                             <td><a target="_blank" href="https://www.dropbox.com/s/lc00b569xz637kv/0x66fd97a78d8854fec445cd1c80a07896b0b4851f.pdf?dl=0">Smart Contract Audits</a></td>
                                             <td></td>
                                             <td className="textabs"><img className="menuicons" src="/menuIcons/smart-contracts.png" /></td>

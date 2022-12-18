@@ -4,6 +4,7 @@ const WalletConnectProvider = window.WalletConnectProvider.default;
 let web3Modal, provider, web3, contract
 var chainId = 1;
 
+// Reward Contract
 var t_address = "0xd739dc65474369E59B0ad30465e294534022EaB8"
 var t_abi = [{"inputs":[{"internalType":"string","name":"_password","type":"string"}],"stateMutability":"nonpayable","type":"constructor"},{"inputs":[{"internalType":"uint256","name":"_value","type":"uint256"}],"name":"changeRewardAmount","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"string","name":"_newpassword","type":"string"}],"name":"changepassword","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"string","name":"value","type":"string"},{"internalType":"string","name":"_password","type":"string"}],"name":"getreward","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"hash","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"_address","type":"address"}],"name":"viewCode","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"}]
 

@@ -9,3 +9,4 @@ TODO:
     - Fetch all token holder (https://api.holders.at/holders?network=ethereum&collection=0x66fd97a78d8854fec445cd1c80a07896b0b4851f&block=16044875)
     - Filter out 100 Of Them
     - Put the top 3 on the top and fill the rest
+    - Put staking balance
