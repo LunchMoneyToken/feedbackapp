@@ -71,7 +71,10 @@ async function unstakeFunc() {
 async function fetchBalance() {
     await contract.methods.balance(walletAddress).call().then(async (res, err) => {
         if (res) {
-            $('#staking_balance').html(res + 'LMY')
+            var bal = (eToNumber(res) / Math.pow(10, 18)).toFixed(2)
+            var icon = calculateBaltoIcon(bal)
+            $('#staking_balance > span > img').attr('src',icon)
+            $('#stakedBalance').html(res + ' LMY')
         }
     });
 }
@@ -161,10 +164,26 @@ function calculateBaltoIcon(earned) {
     }
 }
 
+function eToNumber(num) {
+    let sign = "";
+    (num += "").charAt(0) == "-" && (num = num.substring(1), sign = "-");
+    let arr = num.split(/[e]/ig);
+    if (arr.length < 2) return sign + num;
+    let dot = (.1).toLocaleString().substr(1, 1), n = arr[0], exp = +arr[1],
+        w = (n = n.replace(/^0+/, '')).replace(dot, ''),
+        pos = n.split(dot)[1] ? n.indexOf(dot) + exp : w.length + exp,
+        L = pos - w.length, s = "" + BigInt(w);
+    w = exp >= 0 ? (L >= 0 ? s + "0".repeat(L) : r()) : (pos <= 0 ? "0" + dot + "0".repeat(Math.abs(pos)) + s : r());
+    L = w.split(dot); if (L[0] == 0 && L[1] == 0 || (+w == 0 && +s == 0)) w = 0; //** added 9/10/2021
+    return sign + w;
+    function r() { return w.replace(new RegExp(`^(.{${pos}})(.)`), `$1${dot}$2`) }
+}
+
 function setHoldersONDiv(res) {
     $('#divChange').hide()
+    console.log(res)
     for (var i = 0; i < res.length; i++) {
-        var bal = (parseFloat(res[i]['balance'])).toFixedSpecial(0);
+        var bal = (eToNumber(res[i]['balance']) / Math.pow(10, 18)).toFixed(2)
         var icon = calculateBaltoIcon(bal)
         var count = i + 1;
         $('#divChange').append(`<div class="row h-25 my-2 card-container">
@@ -175,19 +194,14 @@ function setHoldersONDiv(res) {
               d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
           </svg>
           <span class="leaderBoardSpan">`+ count + `</span>
-          <img src="leaderboard/img/man.png" alt="" class="my-2 imgHeight" height="40px" width="auto" />
+          <img src=`+ icon + ` alt="" class="my-2 imgHeight" height="40px" width="auto" />
         </div>
     
         <div class="col-6">
           <span class="btcAddress" id="overflowed">`+ res[i]['address'] + `</span>
         </div>
-        <div class="col-2">
+        <div class="col-4">
           <span class="spanSize">`+ bal + ` LMY</span>
-        </div>
-    
-        <div class="col-2">
-          <img src=`+icon+` alt="man" width="auto" height="30" style="text-align: end"
-            class="imgboard" />
         </div>
       </div>`)
     }
