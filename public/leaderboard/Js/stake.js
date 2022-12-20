@@ -75,6 +75,8 @@ async function fetchBalance() {
             var icon = calculateBaltoIcon(bal)
             $('#staking_balance > span > img').attr('src',icon)
             $('#stakedBalance').html(res + ' LMY')
+
+            $('#staking_balance').show()
         }
     });
 }
