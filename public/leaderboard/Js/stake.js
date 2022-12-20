@@ -197,7 +197,7 @@ function setHoldersONDiv(res) {
           <img src=`+ icon + ` alt="" class="my-2 imgHeight" height="40px" width="auto" />
         </div>
     
-        <div class="col-6">
+        <div class="col-6 over">
           <span class="btcAddress" id="overflowed">`+ res[i]['address'] + `</span>
         </div>
         <div class="col-4">
