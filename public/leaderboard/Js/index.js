@@ -5,7 +5,7 @@ function myFunction1(y) {
     // If media query matches
 
     let div = document.getElementById("divChange");
-    div.className = `container my-4 cardStore`;
+    div.className = `container my-4 cardStore con2`;
 
     let flexDiv = document.querySelectorAll(".card");
 
@@ -16,7 +16,7 @@ function myFunction1(y) {
     //
   } else {
     let div = document.getElementById("divChange");
-    div.className = `col-md-6 mx-auto text-center`;
+    div.className = `col-md-6 mx-auto text-center con2`;
 
     let flexDiv = document.querySelectorAll(".card");
     console.log(flexDiv);

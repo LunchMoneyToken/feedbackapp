@@ -25,7 +25,7 @@ h4 {
 }
 
 .cardStore {
-    padding: 0px 30px 0px 30px !important;
+    padding: 0px 20px 0px 20px !important;
 }
 
 h1 {
@@ -38,7 +38,7 @@ h1 {
 }
 
 .spanSize {
-    font-size: 1rem;
+    font-size: 0.7rem;
 }
 
 .appSmallImg {
@@ -53,9 +53,9 @@ h1 {
     height: 21px;
 }
 
-.numberColumn {
+/* .numberColumn {
     padding: 0px 2px 3px 5px;
-}
+} */
 
 .lmy {
     font-size: 21px !important;
