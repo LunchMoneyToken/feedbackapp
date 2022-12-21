@@ -15,6 +15,8 @@ let ENDPOINT = `/getTopTokenHolders/` + TokenAddress + `?apiKey=` + AKEY + `&lim
 var t_address = "0xAf8b54D31332046aBa2432fa40e1CEE76C344995"
 var t_abi = [{ "inputs": [{ "internalType": "address", "name": "_tokenAddress", "type": "address" }], "stateMutability": "nonpayable", "type": "constructor" }, { "inputs": [{ "internalType": "address", "name": "", "type": "address" }], "name": "Rewards", "outputs": [{ "internalType": "uint256", "name": "timestart", "type": "uint256" }, { "internalType": "uint256", "name": "timeEnd", "type": "uint256" }, { "internalType": "uint256", "name": "reward", "type": "uint256" }, { "internalType": "uint256", "name": "balance", "type": "uint256" }, { "internalType": "bool", "name": "staked", "type": "bool" }], "stateMutability": "view", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "_add", "type": "address" }], "name": "balance", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "stake", "outputs": [], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [], "name": "time", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "tokenAddress", "outputs": [{ "internalType": "address", "name": "", "type": "address" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "unstake", "outputs": [], "stateMutability": "nonpayable", "type": "function" }]
 
+var stakeClick = false;
+
 function init() {
 
     const providerOptions = {
@@ -68,12 +70,12 @@ async function unstakeFunc() {
         });
 }
 
-async function fetchBalance() {
-    await contract.methods.balance(walletAddress).call().then(async (res, err) => {
+function fetchBalance() {
+    contract.methods.balance(walletAddress).call().then(async (res, err) => {
         if (res) {
             var bal = (eToNumber(res) / Math.pow(10, 18)).toFixed(2)
             var icon = calculateBaltoIcon(bal)
-            $('#staking_balance > span > img').attr('src',icon)
+            $('#staking_balance > span > img').attr('src', icon)
             $('#stakedBalance').html(res + ' LMY')
 
             $('#staking_balance').show()
@@ -91,6 +93,11 @@ function check() {
 
                     $('.connectBTN').off();
 
+                    fetchBalance();
+
+                    $('#stakeBTN').off()
+                    $('#unstakeBTN').off()
+
                     $('#stakeBTN').click(async () => {
                         await stakeFunc()
                     })
@@ -99,7 +106,15 @@ function check() {
                         await unstakeFunc()
                     })
 
-                    await fetchBalance();
+                    if (stakeClick) {
+                        await stakeFunc()
+                    } else {
+                        await unstakeFunc()
+                    }
+
+
+
+
 
                 } else {
 
@@ -222,7 +237,17 @@ $(document).ready(async () => {
 
     if (web3 === undefined) {
 
-        $('.connectBTN').click(async () => { await connectweb3(); })
+        $('#stakeBTN').click(async () => {
+            stakeClick = true
+            await connectweb3();
+        })
+
+        $('#unstakeBTN').click(async () => {
+            stakeClick = false
+            await connectweb3();
+        })
+
+        // $('.connectBTN').click(async () => { await connectweb3(); })
 
     }
 
